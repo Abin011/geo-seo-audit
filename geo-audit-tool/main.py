@@ -5,7 +5,7 @@ GEO + SEO 外贸 B2B 独立站审计工具
 
 用法:
   python main.py https://example.com
-  python main.py https://jijualuminium.com --max-pages 50 --output ./reports
+  python main.py https://example.com --max-pages 50 --output ./reports
   python main.py https://example.com --quiet
 
 输出:
@@ -35,7 +35,7 @@ def main() -> int:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("url", help="待审计网站 URL，如 https://jijualuminium.com")
+    parser.add_argument("url", help="待审计网站 URL，如 https://example.com")
     parser.add_argument(
         "--output", "-o",
         type=Path,

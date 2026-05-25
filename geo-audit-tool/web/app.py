@@ -40,7 +40,7 @@ if STATIC_DIR.exists():
 
 
 class AuditRequest(BaseModel):
-    url: str = Field(..., description="待审计网站 URL", examples=["https://jijualuminium.com"])
+    url: str = Field(..., description="待审计网站 URL", examples=["https://example.com"])
     max_pages: int = Field(50, ge=10, le=100)
     samples: int = Field(6, ge=2, le=15)
 

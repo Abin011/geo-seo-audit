@@ -1,6 +1,6 @@
 # GEO + SEO 审计工具（中文版）
 
-面向**外贸 B2B 独立站**的自动化 SEO + GEO（生成式引擎优化）诊断程序。将此前为 JIJU Aluminium 手工完成的审计流程固化为可重复运行的 CLI 工具，**分析报告以中文输出**。
+面向**外贸 B2B 独立站**的自动化 SEO + GEO（生成式引擎优化）诊断程序，支持 CLI 与 Web 界面，**分析报告以中文输出**。
 
 ## 功能概览
 
@@ -45,10 +45,10 @@ PYTHONPATH=. python3 -m uvicorn web.app:app --reload --host 0.0.0.0 --port 8765
 
 ```bash
 # 基本用法
-python main.py https://jijualuminium.com
+python main.py https://example.com
 
 # 指定输出目录与抽样深度
-python main.py https://jijualuminium.com -o ./reports --max-pages 50 --samples 8
+python main.py https://example.com -o ./reports --max-pages 50 --samples 8
 
 # 安静模式（少打印进度）
 python main.py https://example.com -q
@@ -101,13 +101,7 @@ geo-audit-tool/
 4. **Web UI**：FastAPI + 上传 URL 一键出报告
 5. **WordPress 插件**：审计结果写回 Yoast 建议字段
 
-## 示例：JIJU 审计
-
-```bash
-python main.py https://jijualuminium.com -o ../jijualuminium/program-output
-```
-
-预期耗时约 1–3 分钟（取决于抽样页面数与网络）。
+预期单次审计耗时约 1–3 分钟（取决于抽样页面数与网络）。
 
 ## 免责声明
 

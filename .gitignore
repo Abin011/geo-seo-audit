@@ -10,9 +10,6 @@ build/
 # 审计运行时输出（可重新生成）
 geo-audit-tool/output/
 
-# 示例站点的程序输出目录
-jijualuminium/program-output/
-
 # 编辑器 / 系统
 .DS_Store
 .idea/
