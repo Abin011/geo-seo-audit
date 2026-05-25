@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://jijualuminium.com/shop/#collectionpage",
+      "url": "https://jijualuminium.com/shop/",
+      "name": "Shop \u2014 Aluminum Extrusion Profiles & Custom Aluminum Products",
+      "description": "Browse JIJU Aluminium's full catalog of custom aluminum extrusion profiles \u2014 doors and windows, curtain wall, industrial framing, heat sinks, new-energy vehicle parts and CNC machined components.",
+      "isPartOf": {"@id": "https://jijualuminium.com/#website"},
+      "inLanguage": "en-US",
+      "publisher": {"@id": "https://jijualuminium.com/#organization"},
+      "about": {"@id": "https://jijualuminium.com/#organization"},
+      "mainEntity": {"@id": "https://jijualuminium.com/shop/#itemlist"}
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jijualuminium.com/shop/#itemlist",
+      "name": "JIJU Aluminium Product Catalog",
+      "numberOfItems": 137,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://jijualuminium.com/product/aluminum-profiles-for-doors-and-windows/",
+          "name": "Aluminum Profiles for Doors and Windows"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://jijualuminium.com/product-category/aluminum-radiator/",
+          "name": "Aluminum Radiator / Heat Sink Profiles"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://jijualuminium.com/product-category/new-energy-vehicle/",
+          "name": "Aluminum Profiles for New Energy Vehicles"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://jijualuminium.com/product-category/cnc-machining-aluminium/",
+          "name": "CNC Machining Aluminium Parts"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://jijualuminium.com/product-category/decorative-aluminum-profile-customization/",
+          "name": "Decorative Aluminum Profile Customization"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://jijualuminium.com/product-category/spot-aluminum/",
+          "name": "Spot (Stock) Aluminum Profiles"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://jijualuminium.com/product-category/door-and-window-moving-door-customization/aluminum-profiles-for-doors-and-windows/#collectionpage",
+      "url": "https://jijualuminium.com/product-category/door-and-window-moving-door-customization/aluminum-profiles-for-doors-and-windows/",
+      "name": "Aluminum Profiles for Doors and Windows \u2014 Category",
+      "description": "All JIJU custom aluminum profiles engineered for casement, sliding, tilt-turn and curtain-wall door and window systems. 6063-T5 alloy, thermal-break compatible, anodized or powder-coated.",
+      "isPartOf": {"@id": "https://jijualuminium.com/#website"},
+      "inLanguage": "en-US",
+      "publisher": {"@id": "https://jijualuminium.com/#organization"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jijualuminium.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://jijualuminium.com/shop/"},
+          {"@type": "ListItem", "position": 3, "name": "Door And Window Moving Door Customization", "item": "https://jijualuminium.com/product-category/door-and-window-moving-door-customization/"},
+          {"@type": "ListItem", "position": 4, "name": "Aluminum Profiles For Doors And Windows", "item": "https://jijualuminium.com/product-category/door-and-window-moving-door-customization/aluminum-profiles-for-doors-and-windows/"}
+        ]
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Aluminum Profiles for Doors and Windows",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 1,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://jijualuminium.com/product/aluminum-profiles-for-doors-and-windows/",
+            "name": "Aluminum profiles for doors and windows"
+          }
+        ]
+      }
+    }
+  ]
+}

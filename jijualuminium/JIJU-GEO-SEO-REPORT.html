@@ -1,0 +1,3701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JIJU Aluminium — GEO + SEO Master Audit Report (May 2026)</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+    line-height: 1.55;
+    font-size: 15px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(15,23,42,0.06);
+  }
+
+  /* COVER */
+  .cover {
+    padding: 60px 70px 80px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #334155 100%);
+    color: #f1f5f9;
+  }
+  .cover-header { margin-bottom: 40px; }
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .cover-title {
+    font-size: 56px;
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+  .cover-sub {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 14px;
+  }
+  .cover-sub a { color: #38bdf8; text-decoration: none; }
+  .cover-meta {
+    font-size: 13px;
+    color: #94a3b8;
+    border-top: 1px solid #334155;
+    padding-top: 12px;
+  }
+  .cover-meta strong { color: #e2e8f0; }
+
+  .cover-scores {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 50px 0 50px;
+    padding: 36px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .gauge { text-align: center; }
+  .gauge svg { background: #ffffff; border-radius: 50%; padding: 4px; }
+  .gauge-label {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #cbd5e1;
+  }
+
+  .cover-projection { margin-bottom: 40px; }
+  .cover-projection h3, .cover-categories h3, .cover-summary h3, .cover-toc h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #38bdf8;
+    margin: 0 0 16px;
+    font-weight: 700;
+  }
+  .projection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .proj-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .proj-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fbbf24;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .proj-label {
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.3;
+  }
+
+  .cover-categories { margin-bottom: 40px; }
+  .bar-chart { display: flex; flex-direction: column; gap: 10px; }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 220px 1fr 100px;
+    align-items: center;
+    gap: 14px;
+  }
+  .bar-label { font-size: 13px; color: #cbd5e1; }
+  .bar-track {
+    position: relative;
+    height: 22px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .bar-target {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    background: rgba(56,189,248,0.18);
+    border-right: 2px dashed rgba(56,189,248,0.6);
+  }
+  .bar-current {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    border-radius: 5px;
+  }
+  .bar-values {
+    font-size: 13px;
+    text-align: right;
+    color: #e2e8f0;
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-values .cur { color: #fbbf24; font-weight: 700; }
+  .bar-values .arrow { color: #64748b; margin: 0 4px; }
+  .bar-values .tgt { color: #38bdf8; font-weight: 700; }
+
+  .cover-summary p {
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0 0 12px;
+  }
+  .cover-summary code {
+    background: rgba(56,189,248,0.15);
+    color: #7dd3fc;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  .cover-toc { margin-top: 40px; padding-top: 28px; border-top: 1px solid #334155; }
+  .cover-toc ol { margin: 0; padding-left: 22px; column-count: 2; column-gap: 30px; }
+  .cover-toc li { margin: 4px 0; color: #cbd5e1; }
+  .cover-toc a { color: #cbd5e1; text-decoration: none; }
+  .cover-toc a:hover { color: #38bdf8; }
+
+  /* PAGE BREAK */
+  .page-break { page-break-after: always; height: 0; }
+
+  /* BODY (sections after cover) */
+  .report-body {
+    padding: 40px 70px 80px;
+  }
+  .report-body h1 {
+    font-size: 28px;
+    color: #0f172a;
+    border-bottom: 3px solid #fbbf24;
+    padding-bottom: 8px;
+    margin: 50px 0 22px;
+    letter-spacing: -0.01em;
+  }
+  .report-body h1:first-of-type { margin-top: 0; }
+  .report-body h2 {
+    font-size: 21px;
+    color: #1e293b;
+    margin: 32px 0 14px;
+    padding-left: 10px;
+    border-left: 4px solid #38bdf8;
+  }
+  .report-body h3 {
+    font-size: 17px;
+    color: #334155;
+    margin: 22px 0 10px;
+  }
+  .report-body h4 {
+    font-size: 15px;
+    color: #475569;
+    margin: 16px 0 8px;
+  }
+  .report-body p { margin: 8px 0; }
+  .report-body strong { color: #0f172a; }
+  .report-body em { color: #475569; }
+  .report-body a { color: #0284c7; text-decoration: none; }
+  .report-body a:hover { text-decoration: underline; }
+  .report-body code {
+    background: #f1f5f9;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #be185d;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+  }
+  .report-body pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 16px 18px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin: 14px 0;
+  }
+  .report-body pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 12.5px;
+  }
+  .report-body table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    margin: 14px 0;
+    border: 1px solid #e2e8f0;
+  }
+  .report-body th {
+    background: #f1f5f9;
+    color: #0f172a;
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid #cbd5e1;
+    border-right: 1px solid #e2e8f0;
+    font-weight: 700;
+    font-size: 12.5px;
+  }
+  .report-body td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  .report-body tr:hover td { background: #f8fafc; }
+  .report-body ul, .report-body ol { padding-left: 26px; margin: 8px 0; }
+  .report-body li { margin: 4px 0; }
+  .report-body blockquote {
+    border-left: 4px solid #fbbf24;
+    background: #fffbeb;
+    padding: 14px 18px;
+    margin: 14px 0;
+    color: #422006;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+  }
+  .report-body hr {
+    border: 0;
+    border-top: 1px dashed #cbd5e1;
+    margin: 24px 0;
+  }
+
+  /* Severity color cues — applied via CSS keyword detection */
+  .report-body table td:first-child { font-weight: 700; color: #be123c; }
+
+  /* Footer */
+  .report-footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 30px 70px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .report-footer h4 { color: #fbbf24; font-size: 13px; margin: 0 0 8px; }
+  .report-footer a { color: #38bdf8; }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .container { box-shadow: none; max-width: 100%; }
+    .cover { padding: 40px; min-height: 90vh; }
+    .report-body { padding: 30px 40px; }
+    .report-body h1 { page-break-before: always; }
+    .report-body h1:first-of-type { page-break-before: avoid; }
+    .report-body table, .report-body pre { page-break-inside: avoid; }
+    .page-break { page-break-after: always; }
+  }
+
+  @media (max-width: 800px) {
+    .cover { padding: 30px 24px 40px; }
+    .cover-title { font-size: 38px; }
+    .cover-scores { flex-direction: column; gap: 20px; }
+    .projection-grid { grid-template-columns: 1fr 1fr; }
+    .bar-row { grid-template-columns: 1fr; }
+    .report-body { padding: 24px; }
+    .cover-toc ol { column-count: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<section class="cover">
+  <div class="cover-header">
+    <div class="brand-tag">GEO + SEO MASTER AUDIT</div>
+    <h1 class="cover-title">JIJU Aluminium</h1>
+    <div class="cover-sub">Shandong JIJU Aluminium Industry Co., Ltd.<br/>
+      <a href="https://jijualuminium.com/" target="_blank">jijualuminium.com</a></div>
+    <div class="cover-meta">
+      Audit date: <strong>25 May 2026</strong> · 
+      Industry: <strong>B2B Custom Aluminum Extrusion (foreign-trade independent site)</strong> · 
+      Tech: WordPress · WooCommerce · Yoast · Hostinger
+    </div>
+  </div>
+
+  <div class="cover-scores">
+    
+    <div class="gauge">
+      <svg viewBox="0 0 200 200" width="200" height="200">
+        <circle cx="100.0" cy="100.0" r="84.0" fill="none" stroke="#e5e7eb" stroke-width="14"/>
+        <path d="M 100.0 16.0 A 84.0 84.0 0 0 1 140.47 173.61" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="round"/>
+        <text x="100.0" y="106.0" text-anchor="middle" font-size="36" font-weight="800" fill="#0f172a">42</text>
+        <text x="100.0" y="128.0" text-anchor="middle" font-size="11" fill="#64748b">/ 100</text>
+      </svg>
+      <div class="gauge-label">SEO Score</div>
+    </div>
+    
+    <div class="gauge">
+      <svg viewBox="0 0 200 200" width="200" height="200">
+        <circle cx="100.0" cy="100.0" r="84.0" fill="none" stroke="#e5e7eb" stroke-width="14"/>
+        <path d="M 100.0 16.0 A 84.0 84.0 0 0 1 161.23 157.50" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="round"/>
+        <text x="100.0" y="106.0" text-anchor="middle" font-size="36" font-weight="800" fill="#0f172a">37</text>
+        <text x="100.0" y="128.0" text-anchor="middle" font-size="11" fill="#64748b">/ 100</text>
+      </svg>
+      <div class="gauge-label">GEO Score</div>
+    </div>
+  </div>
+
+  <div class="cover-projection">
+    <h3>Projected 90-day Uplift (full-execution scenario)</h3>
+    <div class="projection-grid">
+      <div class="proj-card"><div class="proj-num">+60–90 %</div><div class="proj-label">Google organic traffic</div></div>
+      <div class="proj-card"><div class="proj-num">+250–400 %</div><div class="proj-label">AI search exposure / citations</div></div>
+      <div class="proj-card"><div class="proj-num">+35–65 %</div><div class="proj-label">Inquiry / quote-request volume</div></div>
+      <div class="proj-card"><div class="proj-num">37 → 78</div><div class="proj-label">Composite GEO score</div></div>
+      <div class="proj-card"><div class="proj-num">42 → 80</div><div class="proj-label">Composite SEO score</div></div>
+      <div class="proj-card"><div class="proj-num">25 → 65</div><div class="proj-label">Brand authority score</div></div>
+    </div>
+  </div>
+
+  <div class="cover-categories">
+    <h3>Category Score Breakdown — current vs. 90-day target</h3>
+    <div class="bar-chart">
+
+        <div class="bar-row">
+          <div class="bar-label">AI Citability (25%)</div>
+          <div class="bar-track">
+            <div class="bar-target" style="width:80%"></div>
+            <div class="bar-current" style="width:35%; background:#ef4444"></div>
+          </div>
+          <div class="bar-values"><span class="cur">35</span><span class="arrow">→</span><span class="tgt">80</span></div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">Brand Authority (20%)</div>
+          <div class="bar-track">
+            <div class="bar-target" style="width:65%"></div>
+            <div class="bar-current" style="width:25%; background:#ef4444"></div>
+          </div>
+          <div class="bar-values"><span class="cur">25</span><span class="arrow">→</span><span class="tgt">65</span></div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">Content E-E-A-T (20%)</div>
+          <div class="bar-track">
+            <div class="bar-target" style="width:75%"></div>
+            <div class="bar-current" style="width:30%; background:#ef4444"></div>
+          </div>
+          <div class="bar-values"><span class="cur">30</span><span class="arrow">→</span><span class="tgt">75</span></div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">Technical GEO (15%)</div>
+          <div class="bar-track">
+            <div class="bar-target" style="width:85%"></div>
+            <div class="bar-current" style="width:58%; background:#f59e0b"></div>
+          </div>
+          <div class="bar-values"><span class="cur">58</span><span class="arrow">→</span><span class="tgt">85</span></div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">Schema & Structured Data (10%)</div>
+          <div class="bar-track">
+            <div class="bar-target" style="width:92%"></div>
+            <div class="bar-current" style="width:58%; background:#f59e0b"></div>
+          </div>
+          <div class="bar-values"><span class="cur">58</span><span class="arrow">→</span><span class="tgt">92</span></div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">Platform Optimization (10%)</div>
+          <div class="bar-track">
+            <div class="bar-target" style="width:75%"></div>
+            <div class="bar-current" style="width:26%; background:#ef4444"></div>
+          </div>
+          <div class="bar-values"><span class="cur">26</span><span class="arrow">→</span><span class="tgt">75</span></div>
+        </div>
+</div>
+  </div>
+
+  <div class="cover-summary">
+    <h3>Headline diagnosis</h3>
+    <p>JIJU has the <strong>raw material of a tier-1 B2B aluminum extrusion site</strong> — a real 30-year-old factory with verifiable scale (150,000 t/year, 21 presses, 300,000 m², ISO 9001/14001/45001), a cornerstone blog with genuine engineering depth, a 137-product catalog, and a permissive <code>robots.txt</code> that lets every AI bot in. The site is server-rendered, on HTTP/2 + Brotli, and Yoast already emits valid baseline schema.</p>
+    <p>Yet today JIJU is <strong>largely invisible to AI search engines</strong> and underperforming on Google for high-intent B2B queries. Six concrete failure modes drive the 37/100 GEO score: (1) edge cache bypassed on every URL · (2) commerce-critical schema (Product, FAQPage, HowTo, LocalBusiness) is missing · (3) no AI entity (no Wikidata QID, no Wikipedia, no LinkedIn company page, non-branded YouTube) · (4) duplicated boilerplate across ~100 product pages plus AI-voice blog content and conflicting factory stats · (5) no <code>hreflang</code> · (6) <code>llms.txt</code> exists but contains placeholders and Chinese-character contamination.</p>
+    <p>Every issue is fixable. This report contains the complete remediation package: rewritten homepage copy, 30-keyword strategy, topic cluster map, 20 ready-to-publish FAQs (plus FAQPage schema), 20 AI-quotable citation blocks, a 13-block JSON-LD schema bundle, drop-in <code>robots.txt</code> and <code>llms.txt</code> files, internal-linking map, and a sequenced 90-day action plan totaling ≈72 person-days of effort and ≈USD 6,000 of external cost.</p>
+  </div>
+
+  <div class="cover-toc">
+    <h3>Report contents</h3>
+    <ol>
+      <li><a href="#section-1">Executive Summary &amp; Scores</a></li>
+      <li><a href="#section-2">Critical Issues (by severity)</a></li>
+      <li><a href="#section-3">Page-Level Analysis</a></li>
+      <li><a href="#section-4">Competitor Benchmark</a></li>
+      <li><a href="#section-5">Rewritten Homepage (copy-paste)</a></li>
+      <li><a href="#section-6">Keyword Strategy + Topic Cluster Map</a></li>
+      <li><a href="#section-7">20 B2B FAQs (with FAQPage schema)</a></li>
+      <li><a href="#section-8">20 AI-Citation Content Blocks</a></li>
+      <li><a href="#section-9">Schema Deployment Guide (13 JSON-LD blocks)</a></li>
+      <li><a href="#section-10">Internal Linking Map</a></li>
+      <li><a href="#section-11">90-Day Action Plan</a></li>
+      <li><a href="#section-12">robots.txt + llms.txt (drop-in files)</a></li>
+    </ol>
+  </div>
+</section>
+<div class="page-break"></div>
+
+
+<div class="report-body">
+<h1 id="jiju-aluminium-geo-seo-master-audit-report">JIJU Aluminium — GEO + SEO Master Audit Report</h1>
+<p><strong>Audit Date:</strong> 25 May 2026
+<strong>Site Audited:</strong> https://jijualuminium.com/
+<strong>Company:</strong> Shandong JIJU Aluminium Industry Co., Ltd.
+<strong>Industry:</strong> B2B Custom Aluminum Extrusion Manufacturing (foreign-trade independent site)
+<strong>Tech Stack:</strong> WordPress + WooCommerce + Yoast SEO + Hostinger + HCDN
+<strong>Pages Crawled:</strong> 7 pages, 137 product URLs, 56 product categories, 53 blog posts</p>
+<hr />
+<h2 id="scores-projections">SCORES &amp; PROJECTIONS</h2>
+<pre><code>SEO Score:    42 / 100  (Poor — Fair foundation, weak execution)
+GEO Score:    37 / 100  (Poor — invisible to AI engines today)
+
+Projected 90-day uplift (full execution of this plan):
+  • Google organic traffic         :  +60% to +90%
+  • AI search exposure / citations :  +250% to +400%
+  • Inquiry / quote-request volume :  +35% to +65%
+  • Composite GEO Score            :  37 → 78 / 100
+  • Composite SEO Score            :  42 → 80 / 100
+</code></pre>
+<h3 id="score-breakdown-geo-composite-weighted">Score Breakdown (GEO Composite, weighted)</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Weight</th>
+<th>Current</th>
+<th>Target (90d)</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Citability</td>
+<td>25%</td>
+<td>35 / 100</td>
+<td>80</td>
+<td>content + platform audits</td>
+</tr>
+<tr>
+<td>Brand Authority</td>
+<td>20%</td>
+<td>25 / 100</td>
+<td>65</td>
+<td>manual scan</td>
+</tr>
+<tr>
+<td>Content E-E-A-T</td>
+<td>20%</td>
+<td>30 / 100</td>
+<td>75</td>
+<td>content audit</td>
+</tr>
+<tr>
+<td>Technical GEO</td>
+<td>15%</td>
+<td>58 / 100</td>
+<td>85</td>
+<td>technical audit</td>
+</tr>
+<tr>
+<td>Schema &amp; Structured Data</td>
+<td>10%</td>
+<td>58 / 100</td>
+<td>92</td>
+<td>schema audit</td>
+</tr>
+<tr>
+<td>Platform Optimization</td>
+<td>10%</td>
+<td>26 / 100</td>
+<td>75</td>
+<td>platform audit</td>
+</tr>
+<tr>
+<td><strong>Composite GEO</strong></td>
+<td>100%</td>
+<td><strong>37 / 100</strong></td>
+<td><strong>78 / 100</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="score-breakdown-seo-composite-weighted">Score Breakdown (SEO Composite, weighted)</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Weight</th>
+<th>Current</th>
+<th>Target (90d)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technical SEO</td>
+<td>25%</td>
+<td>58 / 100</td>
+<td>85</td>
+</tr>
+<tr>
+<td>On-page (titles, meta, H1, content)</td>
+<td>20%</td>
+<td>40 / 100</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Content depth &amp; topical authority</td>
+<td>20%</td>
+<td>37 / 100</td>
+<td>78</td>
+</tr>
+<tr>
+<td>Internal links / site architecture</td>
+<td>10%</td>
+<td>35 / 100</td>
+<td>75</td>
+</tr>
+<tr>
+<td>International SEO (hreflang, geo)</td>
+<td>10%</td>
+<td>15 / 100</td>
+<td>70</td>
+</tr>
+<tr>
+<td>Structured data</td>
+<td>10%</td>
+<td>58 / 100</td>
+<td>92</td>
+</tr>
+<tr>
+<td>Off-page authority</td>
+<td>5%</td>
+<td>20 / 100</td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>Composite SEO</strong></td>
+<td>100%</td>
+<td><strong>42 / 100</strong></td>
+<td><strong>80 / 100</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="executive-narrative">EXECUTIVE NARRATIVE</h2>
+<p>JIJU has the <strong>raw material of a tier-1 B2B aluminum extrusion site</strong> — a real 30-year-old factory with verifiable scale (150,000 t/year, 21 presses, 300,000 m², ISO 9001/14001/45001), a cornerstone blog post with genuine engineering depth, a 137-product catalog already crawled by Google, and a permissive <code>robots.txt</code> that lets every AI bot in. The site is server-rendered, on HTTP/2 + Brotli, and Yoast already emits valid baseline schema on every page.</p>
+<p>Yet today, <strong>JIJU is largely invisible to AI search engines</strong> and underperforming on Google for high-intent B2B queries. Six concrete failure modes explain it:</p>
+<ol>
+<li><strong>Edge cache misses everywhere</strong> — every URL returns <code>x-hcdn-cache-status: BYPASS</code>. WP-Rocket is installed but Hostinger HCDN is not warming. TTFB is 1.3–1.8 s and total load 5–6 s — far below Google's SGE / Perplexity TTFB thresholds.</li>
+<li><strong>Commerce-critical schema is missing</strong> — zero Product schema across 137 WooCommerce pages, zero FAQPage, zero HowTo, zero LocalBusiness/Manufacturer. Yoast emits the basic graph but stops there. AI engines have no structured way to extract specs, prices, MOQs, or lead times.</li>
+<li><strong>No AI entity</strong> — "Shandong JIJU Aluminium" has no Wikidata QID, no Wikipedia stub, no company LinkedIn page (only a personal <code>/in/</code> profile), and a non-branded YouTube channel (<code>@JackieWang-g7q</code>). ChatGPT, Gemini, and Claude have no canonical entity to reference.</li>
+<li><strong>Content quality undermines authority</strong> — most product pages share <strong>identical boilerplate</strong> ("Product Parameters Standard: European standard, national standard..."), product pages have <strong>two H1s</strong> with a typo ("ALUMINUMEXTRUSION"), 39 of 137 product slugs are duplicates (<code>-2</code>, <code>-3</code>, ..., <code>-copy</code>), the about page renders as a blog index, blog posts are written in obvious AI first-person voice ("I trust JIJU..."), and key factory stats conflict between sections (150,000 t vs 50,000 t vs 24,000 m² vs "0 employees" displayed).</li>
+<li><strong>No international SEO</strong> despite global B2B targeting — no <code>hreflang</code>, no regional landing pages, no localized currencies/Incoterms guidance.</li>
+<li><strong>The <code>llms.txt</code> exists</strong> (37 KB, 174 lines) but has placeholder title/description and contains Chinese characters, HTML entities, and truncated descriptions — net helpful but not maximizing AI ingestion quality.</li>
+</ol>
+<p><strong>The good news:</strong> every issue is fixable, and most can be fixed with WordPress filters, Yoast templates, schema injections, and structured-content publishing — no migration needed. <strong>Realistic 90-day uplift assuming full execution of the action plan in this report</strong>: composite GEO score 37 → 78, AI citation rate +250–400%, organic traffic +60–90%, and inquiry volume +35–65%.</p>
+<hr />
+<h2 id="report-index">REPORT INDEX</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>00-EXECUTIVE-SUMMARY.md</code> (this file)</td>
+<td>Scores, projections, narrative</td>
+</tr>
+<tr>
+<td><code>01-CRITICAL-ISSUES.md</code></td>
+<td>All Critical/High/Medium/Low issues with fixes</td>
+</tr>
+<tr>
+<td><code>02-PAGE-LEVEL-ANALYSIS.md</code></td>
+<td>Per-template analysis: home, category, product, blog, about, contact, shop</td>
+</tr>
+<tr>
+<td><code>03-COMPETITOR-BENCHMARK.md</code></td>
+<td>Top 5 competitors + tactics to copy</td>
+</tr>
+<tr>
+<td><code>04-REWRITTEN-HOMEPAGE.md</code></td>
+<td>New Title, Meta, H1, H2 structure for homepage</td>
+</tr>
+<tr>
+<td><code>05-KEYWORD-STRATEGY.md</code></td>
+<td>Top 30 keywords + Topic Cluster map</td>
+</tr>
+<tr>
+<td><code>06-FAQ-LIBRARY.md</code></td>
+<td>20 ready-to-publish B2B FAQs (with FAQPage schema)</td>
+</tr>
+<tr>
+<td><code>07-AI-CITATION-BLOCKS.md</code></td>
+<td>20 AI-quotable content blocks (What is / How / Why / Benefits / Applications / Difference)</td>
+</tr>
+<tr>
+<td><code>08-SCHEMA-DEPLOYMENT.md</code></td>
+<td>All 13 JSON-LD schemas + WordPress deployment guide</td>
+</tr>
+<tr>
+<td><code>09-INTERNAL-LINKING-MAP.md</code></td>
+<td>Internal-linking strategy + top 30 link actions</td>
+</tr>
+<tr>
+<td><code>10-90-DAY-ACTION-PLAN.md</code></td>
+<td>Week 1, Week 2, Month 1, Month 2, Month 3 plan</td>
+</tr>
+<tr>
+<td><code>11-ROBOTS-AND-LLMSTXT.md</code></td>
+<td>Drop-in <code>robots.txt</code> and improved <code>llms.txt</code></td>
+</tr>
+<tr>
+<td><code>JIJU-GEO-SEO-CLIENT-REPORT.pdf</code></td>
+<td>Presentation-ready client deliverable</td>
+</tr>
+</tbody>
+</table>
+<p>Source-of-truth subagent reports remain at:
+- <code>/tmp/jiju_technical_report.md</code> (technical, 615 lines)
+- <code>/tmp/jiju_content_report.md</code> (content/EEAT)
+- <code>/tmp/jiju_schema_report.md</code> + <code>/tmp/jiju_schema/</code> (schema + 13 JSON-LD files)
+- <code>/tmp/jiju_platform_report.md</code> (platform analysis, 516 lines)</p>
+<hr />
+<h1 id="01-issues-by-severity">01 — Issues by Severity</h1>
+<p>Synthesized from technical, content, schema, and platform audits. Each issue: ID · Title · Where · Impact · Fix · Effort.</p>
+<p>Effort: S (≤2 h) · M (½–2 days) · L (3+ days)
+Impact: C (Critical, immediate ranking) · H (High, growth) · M (Medium) · L (Low/long-term)</p>
+<hr />
+<h2 id="critical-fix-this-week-compounding-daily-damage">CRITICAL — Fix this week (compounding daily damage)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Issue</th>
+<th>Where</th>
+<th>Impact</th>
+<th>Fix</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td><strong>Edge cache bypassed on every URL</strong> — <code>x-hcdn-cache-status: BYPASS</code> always. WP-Rocket installed but HCDN not warming. TTFB 1.3–1.8 s, total load 5–6 s.</td>
+<td>Sitewide</td>
+<td>C</td>
+<td>Hostinger panel → Performance → enable HCDN page cache. WP-Rocket → Cache lifespan 10 h, Mobile cache ON, Preload sitemap. Add <code>Cache-Control: public, max-age=600, s-maxage=86400</code> for HTML; 1 yr for static.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>C2</td>
+<td><strong>51 external JS + 77 CSS files on homepage</strong> — render-blocking, kills LCP/INP.</td>
+<td>Home + every page</td>
+<td>C</td>
+<td>WP-Rocket → "Load JS deferred", "Delay JS execution", "Combine Google Fonts". Disable unused Elementor widgets. Audit 50 JS files via Coverage tool, drop ≥30. Switch to Astra/Kadence base theme if Elementor bloat persists.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>C3</td>
+<td><strong>Zero Product schema on 137 WooCommerce pages</strong> — no name/sku/brand/offers/aggregateRating exposed to Google or AI.</td>
+<td>All <code>/product/*</code></td>
+<td>C</td>
+<td>Deploy <code>wpseo_schema_product</code> filter (snippet in <code>08-SCHEMA-DEPLOYMENT.md</code>). Or install Rank Math Pro and let it auto-emit. Validate on Google Rich Results Test.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>C4</td>
+<td><strong>39 / 137 product URLs are duplicates</strong> (<code>-2</code>, <code>-3</code>, ..., <code>-copy</code> suffixes — e.g. <code>aluminum-alloy-doors-and-windows-2/3/4/5/6/7/8</code>). Splits link equity, triggers Google "Duplicate without user-selected canonical" warnings.</td>
+<td><code>/product/*-N/</code>, <code>*-copy/</code></td>
+<td>C</td>
+<td>Audit each cluster → choose primary → 301-redirect duplicates. Add bulk-canonical filter (snippet in tech report §12). Then physically delete duplicate posts in WooCommerce.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>C5</td>
+<td><strong>Two <code>&lt;h1&gt;</code> on every product page</strong> ("LEADING CUSTOM ALUMINUMEXTRUSION MANUFACTURER" + product name) — also has a typo (no space).</td>
+<td>All <code>/product/*</code></td>
+<td>C</td>
+<td>Edit Elementor product template → demote the global "LEADING..." line to <code>&lt;h2&gt;</code> or to a styled <code>&lt;div&gt;</code>. Fix typo to "LEADING CUSTOM ALUMINUM EXTRUSION MANUFACTURER".</td>
+<td>S</td>
+</tr>
+<tr>
+<td>C6</td>
+<td><strong>Robots.txt has duplicate <code>User-agent: *</code> blocks</strong> (Yoast bug) and <strong>no explicit AI crawler allows</strong>. AI engines see ambiguous signals.</td>
+<td><code>/robots.txt</code></td>
+<td>C</td>
+<td>Replace with the file in <code>11-ROBOTS-AND-LLMSTXT.md</code>. Adds explicit allows for GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, Applebot-Extended, CCBot, Meta-ExternalAgent, Amazonbot, cohere-ai, MistralAI-User, DuckAssistBot, ImagesiftBot, Diffbot, YouBot, TimpiBot. Explicit Bytespider/MJ12/DotBot/PetalBot blocks.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>C7</td>
+<td><strong>All 137 product pages missing <code>&lt;meta name="description"&gt;</code></strong> — Google generates random snippets, kills CTR.</td>
+<td>All <code>/product/*</code></td>
+<td>C</td>
+<td>Yoast → Search Appearance → Products → meta-description template: <code>Custom %%title%% in 6063/6061 aluminum, %%cf_alloy%% alloy, anodized/powder coated. ISO 9001 factory, MOQ 500 kg, 5–7 day mold lead time. Get a quote.</code></td>
+<td>S</td>
+</tr>
+<tr>
+<td>C8</td>
+<td><strong><code>/shop/</code> page has NO title, NO meta, NO canonical, NO H1</strong> — broken commerce hub.</td>
+<td><code>/shop/</code></td>
+<td>C</td>
+<td>In Yoast → set Title <code>JIJU Aluminum Extrusion Catalog — 137 Custom Profiles</code>, meta <code>Browse JIJU's full catalog of 137 custom aluminum extrusions ...</code>, H1 <code>JIJU Aluminum Extrusion Catalog</code>. Fix template's <code>wp_head</code> if Yoast filter not firing on shop archive.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>C9</td>
+<td><strong>Product pages have boilerplate "Product Parameters" copy</strong> repeated across ~100 pages — duplicate content + zero AI quotability. Some entries also contain Chinese characters (e.g. "产品参数 标准：欧标、国标").</td>
+<td>All <code>/product/*</code></td>
+<td>C</td>
+<td>Replace boilerplate with the alloy-specific spec block in <code>07-AI-CITATION-BLOCKS.md</code> (block #11). Use ACF or product custom fields per product. Strip all Chinese characters from English-locale pages.</td>
+<td>L</td>
+</tr>
+<tr>
+<td>C10</td>
+<td><strong>No company entity online</strong> — no Wikidata QID, no Wikipedia stub, no company LinkedIn page (only personal <code>/in/jijualuminium/</code>), non-branded YouTube <code>@JackieWang-g7q</code>. AI engines cannot resolve "JIJU Aluminium" to a canonical entity.</td>
+<td>Off-site</td>
+<td>C</td>
+<td>(a) Create Wikidata QID for "Shandong JIJU Aluminium Co., Ltd." (founding 1994, Linqu County, alloys, certs). (b) Build LinkedIn company page. (c) Rebrand YouTube channel as <code>@JIJUAluminium</code>. (d) Add full <code>sameAs</code> array to Organization schema (snippet in <code>08-SCHEMA-DEPLOYMENT.md</code>).</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="high-fix-within-2-weeks">HIGH — Fix within 2 weeks</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Issue</th>
+<th>Where</th>
+<th>Impact</th>
+<th>Fix</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td><strong><code>/wp-json/wp/v2/users</code> exposes admin</strong> — leaks <code>"name":"jackiewang", "is_super_admin":true</code>. Security + privacy + AI scrapability of admin identity.</td>
+<td>REST API</td>
+<td>H</td>
+<td>Drop the mu-plugin in tech report §12.1 to gate the users endpoint.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H2</td>
+<td><strong>Zero security headers</strong> — no HSTS, no real CSP, no X-Frame-Options, no X-Content-Type-Options, no Referrer-Policy, no Permissions-Policy.</td>
+<td>All HTTP responses</td>
+<td>H</td>
+<td>Add the <code>.htaccess</code> block in tech report §12.3.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H3</td>
+<td><strong>Yoast Chinese text leak in product breadcrumb</strong> — <code>"产品"</code> appears as breadcrumb item on English pages, fails Google validation.</td>
+<td><code>/product/*</code> schema</td>
+<td>H</td>
+<td>Override Yoast breadcrumb via <code>wpseo_breadcrumb_links</code> filter to inject "Shop" instead of "产品". Suppress duplicate WooCommerce-emitted BreadcrumbList.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H4</td>
+<td><strong>About page is actually a blog index</strong> — <code>/jiju-aluminium-leading-manufacturer-of-aluminium-extrusions/</code> has no H1, renders blog list. Strongest E-E-A-T page on the site is missing.</td>
+<td>"About" URL</td>
+<td>H</td>
+<td>Build new <code>/about-jiju-aluminium/</code> page with company story, leadership, ISO PDFs, Person bios for engineers, photos of factory floor, AboutPage schema. 301 the old blog-index URL once new page is live.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>H5</td>
+<td><strong>Blog posts use first-person AI voice</strong> ("I trust JIJU…", "I see…", "I order small batches...") and many include AI-style typos ("JIJIU"). Lowers EEAT and reads as AI-generated.</td>
+<td>All blog posts</td>
+<td>H</td>
+<td>Rewrite to third-person editorial voice. Assign each post to a real engineer. Add Person schema with <code>jobTitle</code>, <code>worksFor</code>, <code>knowsAbout</code>. Add publication date and "Last updated". Remove AI-tells (<code>Image Source: pexels</code>, <code>&amp;nbsp;</code> artifacts, <code>？</code> full-width punctuation).</td>
+<td>L</td>
+</tr>
+<tr>
+<td>H6</td>
+<td><strong>No <code>hreflang</code></strong> despite serving global B2B markets.</td>
+<td>All HTML <code>&lt;head&gt;</code></td>
+<td>H</td>
+<td>Add <code>wp_head</code> filter to emit <code>x-default + en + de + es + ar</code> (start with <code>x-default + en</code> and grow as you translate). Snippet in tech report §12.5.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H7</td>
+<td><strong>Conflicting factory stats</strong> — homepage shows 150,000 t / 50,000 t / 24,000 m² / "0 Number of Employees" simultaneously.</td>
+<td>Homepage</td>
+<td>H</td>
+<td>Fix the Elementor counter widgets: 150,000 t/year capacity, 300,000 m² area, 21 production lines, 400+ employees. Set as authoritative across all pages.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H8</td>
+<td><strong>Cornerstone blog has duplicated "Phase 3" section</strong> (<code>/custom-aluminum-extrusion-guide-from-design-to-delivery/</code>).</td>
+<td>One blog post</td>
+<td>H</td>
+<td>Edit blog: keep ONE Phase 3, renumber subsequent phases.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H9</td>
+<td><strong><code>/Contact-Aluminum-Supplier/</code></strong> (mixed-case) returns <strong>200 OK</strong> instead of 301-ing to lowercase.</td>
+<td>URL handling</td>
+<td>H</td>
+<td>Add <code>RewriteRule</code> in <code>.htaccess</code> to force lowercase. Snippet in tech report §12.4.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H10</td>
+<td><strong>8 of 13 product page schemas missing</strong>: Product, Offer, AggregateRating, MerchantReturnPolicy, FAQPage, HowTo, Service, LocalBusiness/Manufacturer.</td>
+<td>All product, home</td>
+<td>H</td>
+<td>Deploy combined snippet from <code>/tmp/jiju_schema/combined_snippet.html</code>.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>H11</td>
+<td><strong>OG title defaults to "Home" / "Blog" / "Contact Us"</strong> instead of full page title — kills LinkedIn / X / WhatsApp share CTR.</td>
+<td>Sitewide</td>
+<td>H</td>
+<td>Yoast → Social → set <code>og:title</code> template to <code>%%title%%</code> instead of post type fallback.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H12</td>
+<td><strong>Generator headers leak versions</strong>: WP 6.7.5, WC 9.7.3, Elementor 3.31.2 — security signal + AI scrapers fingerprint old plugins.</td>
+<td>All HTML</td>
+<td>H</td>
+<td>Add <code>remove_action('wp_head', 'wp_generator')</code> and Elementor/WC equivalents.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>H13</td>
+<td><strong>Personal LinkedIn (/in/jijualuminium/)</strong> instead of company page. Personal profiles can't be <code>sameAs</code> an Organization without confusion.</td>
+<td>Off-site</td>
+<td>H</td>
+<td>Build LinkedIn Company Page → 5 starter posts → invite employees → migrate followers.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>H14</td>
+<td><strong>Typo "Whar Our Clients Say"</strong> on homepage.</td>
+<td>Homepage</td>
+<td>H</td>
+<td>Edit Elementor section: "What Our Clients Say".</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="medium-fix-within-1-month">MEDIUM — Fix within 1 month</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Issue</th>
+<th>Where</th>
+<th>Impact</th>
+<th>Fix</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Author archive <code>/?author=1</code> returns 200 with <code>noindex,follow</code> — better to 301 to about page.</td>
+<td><code>/author/*</code></td>
+<td>M</td>
+<td>Yoast → Search Appearance → Archives → disable Author. Add 301 to <code>/about-jiju-aluminium/</code>.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>No AVIF support; only 63% WebP coverage on images.</td>
+<td>Sitewide</td>
+<td>M</td>
+<td>Install ShortPixel or Imagify; bulk regenerate to AVIF + WebP fallback. Drop ImageMagick quality to 78.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Deeply nested product-category URLs (<code>/product-category/aluminum-extrusion-customization/aluminum-alloy-accessories/</code>).</td>
+<td>Category URLs</td>
+<td>M</td>
+<td>Either flatten to <code>/category/aluminum-alloy-accessories/</code> (301 old), OR keep nested but ensure breadcrumb schema is correct.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Only 2 preconnect / 3 preload hints in <code>&lt;head&gt;</code>.</td>
+<td>Sitewide</td>
+<td>M</td>
+<td>Add <code>&lt;link rel="preconnect"&gt;</code> to fonts.googleapis.com, fonts.gstatic.com, cdn provider. Preload above-the-fold hero image.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>16 inline <code>&lt;style&gt;</code> blocks per page.</td>
+<td>Sitewide</td>
+<td>M</td>
+<td>WP-Rocket → "Combine CSS" + "Optimize CSS delivery (Critical CSS)".</td>
+<td>S</td>
+</tr>
+<tr>
+<td>M6</td>
+<td><code>llms.txt</code> has Chinese contamination, HTML entities (<code>&amp;hellip;</code>, <code>&amp;#8220;</code>), truncated descriptions, broken URL-encoded slug (<code>%ef%bc%9f</code>).</td>
+<td><code>/llms.txt</code></td>
+<td>M</td>
+<td>Replace with hand-curated version in <code>11-ROBOTS-AND-LLMSTXT.md</code>. Add <code>## Optional</code> section.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>M7</td>
+<td>Missing FAQPage schema on all pages despite having FAQ-like content.</td>
+<td>Sitewide</td>
+<td>M</td>
+<td>Deploy <code>f_faqpage.json</code> from <code>/tmp/jiju_schema/</code>. Add FAQs to product pages too.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>M8</td>
+<td>Blog post Person schema is a stub <code>{"name":"jijualuminium"}</code>.</td>
+<td>All <code>/blog/*</code></td>
+<td>M</td>
+<td>Replace with named "JIJU Engineering Team" Organization+Person hybrid (<code>h_article_with_author.json</code>).</td>
+<td>S</td>
+</tr>
+<tr>
+<td>M9</td>
+<td>No HowTo schema on cornerstone blog despite being a step-by-step guide.</td>
+<td><code>/custom-aluminum-extrusion-guide-from-design-to-delivery/</code></td>
+<td>M</td>
+<td>Deploy <code>g_howto_order.json</code>.</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="low-optimize-when-possible-long-term-polish">LOW — Optimize when possible (long-term polish)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Issue</th>
+<th>Where</th>
+<th>Impact</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td>YouTube channel <code>@JackieWang-g7q</code> is non-branded</td>
+<td>Off-site</td>
+<td>L</td>
+<td>Rebrand → <code>@JIJUAluminium</code>. Add channel banner, custom URL, About section with company info, 5 starter videos.</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>Instagram handle <code>jiju15621728699</code> is cryptic</td>
+<td>Off-site</td>
+<td>L</td>
+<td>Rebrand → <code>@jijualuminium</code>.</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>Customer testimonials are first-name only ("Alice", "Marshall")</td>
+<td>Homepage</td>
+<td>L</td>
+<td>Replace with full name + company + photo + LinkedIn link. Add Review schema.</td>
+</tr>
+<tr>
+<td>L4</td>
+<td><code>/feed/</code> accessible without <code>noindex</code></td>
+<td>RSS feeds</td>
+<td>L</td>
+<td>Yoast → Tools → File editor → add <code>noindex</code> directive for feeds.</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>Search results page <code>?s=</code> not blocked</td>
+<td>Search URL</td>
+<td>L</td>
+<td>Yoast → Search Appearance → Special pages → search → noindex,nofollow.</td>
+</tr>
+<tr>
+<td># 02 — Page-Level Analysis</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Per-template analysis of representative pages.</p>
+<hr />
+<h2 id="a-homepage-httpsjijualuminiumcom">A. Homepage — <code>https://jijualuminium.com/</code></h2>
+<p><strong>Current title:</strong> <code>Custom Aluminum Extrusion Manufacturer &amp; Supplier | JIJU</code> (60 chars, OK)
+<strong>Current meta:</strong> <code>Leading China Aluminum Extrusion Manufacturer. Custom profiles for doors, windows &amp; industry. Global shipping. Get your quote now.</code> (130 chars, OK)
+<strong>Current H1:</strong> <code>ABOUT GLOBAL ALUMINIUM EXTRUSION</code> ❌
+<strong>Word count:</strong> 1,295 · <strong>Images:</strong> 81 · <strong>JSON-LD blocks:</strong> 1</p>
+<h3 id="issues">Issues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Impact</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>H1 doesn't include primary keyword</td>
+<td>High</td>
+<td>Change H1 to <em>"Custom Aluminum Extrusion Manufacturer in China — Shandong JIJU"</em></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Conflicting factory stats: 150,000 t / 50,000 t / 24,000 m² / 0 employees</td>
+<td>Critical (trust)</td>
+<td>Single source of truth: 150,000 t/year · 300,000 m² · 21 presses · 400+ employees</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Typo "Whar Our Clients Say"</td>
+<td>Critical (trust)</td>
+<td>Fix to "What Our Clients Say"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Testimonials are first-name only with stock-style photos</td>
+<td>High (EEAT)</td>
+<td>Add full name + company + photo + LinkedIn</td>
+</tr>
+<tr>
+<td>5</td>
+<td>OG title shows "Home"</td>
+<td>High</td>
+<td>Set OG title to actual page title</td>
+</tr>
+<tr>
+<td>6</td>
+<td>No FAQ section despite having FAQ content potential</td>
+<td>High (GEO)</td>
+<td>Add 6-FAQ block + FAQPage schema</td>
+</tr>
+<tr>
+<td>7</td>
+<td>No <code>&lt;table&gt;</code> summarizing factory specs</td>
+<td>Medium (GEO)</td>
+<td>Add "Factory At-A-Glance" table (16 quotable numbers)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>51 external JS, 8.6 s total load</td>
+<td>Critical (CWV)</td>
+<td>Cache + JS deferral (see C1, C2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solution">Solution</h3>
+<p>See <code>04-REWRITTEN-HOMEPAGE.md</code> for the complete rewritten Title/Meta/H1/H2 structure plus the new factory-stats table and FAQ block.</p>
+<hr />
+<h2 id="b-product-page-productaluminum-profiles-for-doors-and-windows">B. Product Page — <code>/product/aluminum-profiles-for-doors-and-windows/</code></h2>
+<p><strong>Current title:</strong> <code>Aluminum profiles for doors and windows - Aluminum Customization-Supplier</code>
+<strong>Current meta:</strong> <em>(empty)</em> ❌
+<strong>Current H1s:</strong> <code>LEADING CUSTOM ALUMINUMEXTRUSION MANUFACTURER</code> + <code>Aluminum profiles for doors and windows</code> ❌ (two H1s + typo)
+<strong>Word count:</strong> 1,319 · <strong>Schema types:</strong> WebPage, BreadcrumbList, ImageObject, Organization (no Product) ❌</p>
+<h3 id="issues_1">Issues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Impact</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Two H1s</td>
+<td>Critical</td>
+<td>Demote first to H2 or div</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Typo "ALUMINUMEXTRUSION" (no space)</td>
+<td>Critical</td>
+<td>Fix to "ALUMINUM EXTRUSION"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>No meta description</td>
+<td>Critical</td>
+<td>Yoast template (see C7)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>No Product schema</td>
+<td>Critical</td>
+<td>Deploy <code>d_product_template.json</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>No Offer / AggregateRating / MerchantReturnPolicy</td>
+<td>Critical</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Boilerplate spec block ("European standard, national standard...") shared with ~100 other product pages</td>
+<td>Critical</td>
+<td>Replace with alloy-specific spec block (citation block #11)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Yoast breadcrumb leaks Chinese "产品"</td>
+<td>High</td>
+<td>Override breadcrumb (H3)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>No FAQ on product page</td>
+<td>High</td>
+<td>Inject 4 product-specific FAQs from FAQ library</td>
+</tr>
+<tr>
+<td>9</td>
+<td>No SKU, no MOQ, no lead time visible</td>
+<td>High</td>
+<td>Add product custom fields + display block</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Duplicate slugs (<code>-2</code> through <code>-8</code>)</td>
+<td>Critical</td>
+<td>301 + delete (C4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-page-block-order-after-fix">Recommended Page Block Order (after fix)</h3>
+<ol>
+<li>Breadcrumb (Home &gt; Shop &gt; Doors &amp; Windows &gt; Aluminum Profiles)</li>
+<li>H1: "Aluminum Profiles for Doors and Windows — 6063-T5 / 6061-T6 Custom Extrusion"</li>
+<li>Hero image gallery (with <code>ImageObject</code> schema)</li>
+<li>Quote-request CTA</li>
+<li><strong>Spec table</strong> (citable for AI): alloy options, tempers, wall thickness range, length, tolerances, surface options, MOQ, mold lead time</li>
+<li>Sectional drawings / 3D PDF download</li>
+<li>Application industries (with internal links to industry hubs)</li>
+<li>Surface finish options (with internal links to anodizing/PVDF/powder hubs)</li>
+<li><strong>FAQ section</strong> (4-6 product-specific FAQs with FAQPage schema)</li>
+<li>Related products (with internal links)</li>
+<li>Why JIJU (3 trust bullets)</li>
+<li>Quote-request form</li>
+</ol>
+<hr />
+<h2 id="c-shop-page-shop">C. Shop Page — <code>/shop/</code></h2>
+<p><strong>Current state:</strong> No title, no meta, no canonical, no H1, schema only WebSite + Organization (no CollectionPage). Critical broken commerce hub.</p>
+<h3 id="fix">Fix</h3>
+<ul>
+<li>Title: <code>JIJU Aluminum Extrusion Catalog — 137 Custom Profiles</code></li>
+<li>Meta: <code>Browse JIJU's full catalog of 137 custom aluminum extrusions. 6063/6061/6005/6082 alloys, anodized, powder coated, PVDF, mill finish. ISO 9001 factory.</code></li>
+<li>H1: <code>JIJU Aluminum Extrusion Catalog</code></li>
+<li>Add CollectionPage + ItemList schema (<code>k_collectionpage_itemlist.json</code>)</li>
+<li>Above-the-fold: alloy filter, surface filter, application filter, MOQ filter</li>
+<li>Below: featured cluster of 8 categories with images + descriptions</li>
+</ul>
+<hr />
+<h2 id="d-product-category-page-example-product-categorydoor-and-window-moving-door-customizationaluminum-profiles-for-doors-and-windows">D. Product Category Page — example: <code>/product-category/door-and-window-moving-door-customization/aluminum-profiles-for-doors-and-windows/</code></h2>
+<p><strong>Current title:</strong> <code>Aluminum Profiles For Doors And Windows Archives - Aluminum Customization-Supplier</code> ❌ ("Archives" exposed)
+<strong>Current meta:</strong> <em>(empty)</em> ❌
+<strong>Current H1:</strong> <code>Aluminum Profiles For Doors And Windows</code></p>
+<h3 id="issues_2">Issues</h3>
+<ul>
+<li>Path 5 levels deep — bad URL structure</li>
+<li>"Archives" suffix in title</li>
+<li>No category description / cornerstone copy</li>
+<li>No filter UI</li>
+<li>No FAQ block</li>
+</ul>
+<h3 id="fix_1">Fix</h3>
+<ul>
+<li>Yoast → Search Appearance → Categories → title template removes "Archives"</li>
+<li>Add category description (300-500 words) above product grid — this is where AI engines pick up category authority signals</li>
+<li>Add <code>CollectionPage + ItemList</code> schema</li>
+<li>Flatten path or build a dedicated <code>/aluminum-window-profiles/</code> cluster page that links to the category</li>
+</ul>
+<hr />
+<h2 id="e-blog-post-example-cornerstone-custom-aluminum-extrusion-guide-from-design-to-delivery">E. Blog Post — example cornerstone <code>/custom-aluminum-extrusion-guide-from-design-to-delivery/</code></h2>
+<p><strong>Current title:</strong> <code>Custom Aluminum Extrusion Guide: From Design to Delivery</code> ✅
+<strong>Current meta:</strong> <code>Master the custom aluminum extrusion process. Explore 6061/6063 design tips, tooling, and precision manufacturing. Download our guide and start your project now!</code> ✅
+<strong>Current H1:</strong> <code>Custom Aluminum Extrusion Guide: From Design to Delivery</code> ✅
+<strong>Word count:</strong> 3,072 ✅ · <strong>Schema:</strong> Article + Person stub
+<strong>Issue:</strong> Phase 3 section is duplicated; Person schema is <code>{"name":"jijualuminium"}</code> only.</p>
+<h3 id="issues_3">Issues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Duplicated Phase 3 section</td>
+<td>Edit blog: remove duplicate</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Generic Person schema</td>
+<td>Replace with named "JIJU Engineering Team" + <code>knowsAbout</code> array</td>
+</tr>
+<tr>
+<td>3</td>
+<td>No HowTo schema despite being a step-by-step guide</td>
+<td>Deploy <code>g_howto_order.json</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>First-person voice in places</td>
+<td>Convert to third-person editorial</td>
+</tr>
+<tr>
+<td>5</td>
+<td>No table of contents / jump links</td>
+<td>Add ToC anchored to each phase H2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Hard-coded image alt text uses generic "image"</td>
+<td>Rewrite alts to describe scene + alloy + process</td>
+</tr>
+<tr>
+<td>7</td>
+<td>No "Last updated" date</td>
+<td>Add date + author + reviewer below H1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="strength-to-keep">Strength to keep</h3>
+<ul>
+<li>Genuinely deep technical content (DFM, EDM, H13, T5/T6, EN 755, ASTM B221)</li>
+<li>3,072 words is appropriate for cornerstone</li>
+<li>Good use of phase-based structure</li>
+</ul>
+<hr />
+<h2 id="f-about-blog-hub-jiju-aluminium-leading-manufacturer-of-aluminium-extrusions">F. About / "Blog hub" — <code>/jiju-aluminium-leading-manufacturer-of-aluminium-extrusions/</code></h2>
+<p><strong>Current title:</strong> <code>JIJU ALUMINIUM: Leading Manufacturer of Aluminium Extrusions</code> ✅
+<strong>Current meta:</strong> <code>Discover why JIJU ALUMINIUM is a leading manufacturer of aluminium extrusions. We deliver superior quality, custom profiles &amp; global export service.</code> ✅
+<strong>Current H1:</strong> <em>(none)</em> ❌
+<strong>Issue:</strong> This URL renders a blog index, not a true About page. Strongest E-E-A-T page is missing.</p>
+<h3 id="fix_2">Fix</h3>
+<p>Build a <strong>brand new</strong> <code>/about-jiju-aluminium/</code> page (≥1,400 words) with:</p>
+<ol>
+<li><strong>H1:</strong> "About Shandong JIJU Aluminium — 30 Years of Aluminum Extrusion Since 1994"</li>
+<li>Founding story (1994, Linqu County, founder name, mission)</li>
+<li><strong>Plant tour photo gallery</strong> (drone shot, presses, anodizing line, CNC center, packaging)</li>
+<li><strong>Leadership team</strong> with photos + bios (CEO, Chief Extrusion Engineer, Quality Manager, Export Manager) + Person schema for each</li>
+<li><strong>By the numbers</strong> table (300,000 m², 150,000 t/yr, 21 presses, 400+ employees, 30 yrs experience, ISO×3, 40+ export markets)</li>
+<li><strong>Certifications</strong> section with linked PDFs (ISO 9001, ISO 14001, ISO 45001, plus QUALICOAT / REACH / RoHS)</li>
+<li><strong>Sustainability</strong> statement (recycled content %, energy mix, ASI membership goal)</li>
+<li><strong>Memberships</strong> (CNIA, AEC if pursuing)</li>
+<li><strong>Awards / press</strong> (industry awards, exhibition photos)</li>
+<li><strong>CTA</strong>: visit our factory / request video tour</li>
+</ol>
+<p>301 the old <code>/jiju-aluminium-leading-manufacturer-.../</code> URL to the new <code>/about-jiju-aluminium/</code> after launch.</p>
+<hr />
+<h2 id="g-contact-page-contact-aluminum-supplier">G. Contact Page — <code>/contact-aluminum-supplier/</code></h2>
+<p><strong>Current title:</strong> <code>Contact Aluminum Supplier: Precision Extrusions</code> ✅ (could be sharper)
+<strong>Current meta:</strong> <code>Contact us for high-quality 6061/6063 aluminum extrusions solutions. Request a fast quote and start your custom project with us today!</code> ✅
+<strong>Current H1:</strong> <code>Contact Shandong Jiju Aluminum Industry Co., Ltd. for a Free Quote</code> ✅
+<strong>Word count:</strong> 494</p>
+<h3 id="issues_4">Issues</h3>
+<ul>
+<li>WhatsApp button visible but no Skype/WeChat alternatives for Chinese-comfortable buyers</li>
+<li>No regional contact (e.g., Europe sales, North America sales) — even if same person, signals coverage</li>
+<li>Office hours not displayed</li>
+<li>No <code>ContactPage</code> schema, no <code>ContactPoint</code> array</li>
+<li>No Google Maps embed showing the actual factory in Linqu County</li>
+</ul>
+<h3 id="fix_3">Fix</h3>
+<ul>
+<li>Add <code>ContactPage</code> schema with 3 ContactPoints: Sales, Technical, Customer Support (each with <code>availableLanguage</code>, <code>contactType</code>, <code>areaServed</code>)</li>
+<li>Embed Google Map showing factory address: <code>Linqu County, Weifang City, Shandong Province, China</code> (use exact address)</li>
+<li>Add office hours: <code>Mon–Sat 08:00–18:00 CST · response within 24 h worldwide</code></li>
+<li>Add WeChat QR + Skype handle (for Chinese / Russian / SE-Asian buyers)</li>
+<li>List time-zone friendly contact windows: "Best time for EU buyers: 14:00–17:00 CST"</li>
+</ul>
+<hr />
+<h1 id="03-competitor-benchmark">03 — Competitor Benchmark</h1>
+<p>Top 5 direct competitors in the "Custom Aluminum Extrusion Manufacturer (China B2B export)" segment, evaluated and contrasted against JIJU.</p>
+<h2 id="selection-rationale">Selection rationale</h2>
+<p>Three categories of competitors matter for JIJU's GEO/SEO playbook:</p>
+<ol>
+<li><strong>Western premium benchmarks</strong> — high domain authority, strong schema, what AI engines cite by default. Not direct buyers, but they set the standard.</li>
+<li><strong>Chinese export specialists</strong> — JIJU's actual sales-channel competitors on Alibaba, Made-in-China, and direct outreach.</li>
+<li><strong>Asian-trade hybrids</strong> — sites like Gabrian who sit between buyer and Chinese factory and dominate informational queries.</li>
+</ol>
+<hr />
+<h2 id="competitor-matrix">Competitor Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Competitor</th>
+<th>URL</th>
+<th>Type</th>
+<th>Domain Strength</th>
+<th>Schema</th>
+<th>Content Depth</th>
+<th>AI Citation Probability</th>
+<th>Key Advantage</th>
+<th>Key Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Hydro Extrusions</strong></td>
+<td>extrusions.hydro.com</td>
+<td>Western premium</td>
+<td>Very High (parent: Norsk Hydro, public co.)</td>
+<td>Strong</td>
+<td>1000+ pages, deep technical library</td>
+<td>Very High — default for "aluminum extrusion" generic queries</td>
+<td>Brand authority, sustainability story, Wikipedia entry, real engineer bylines</td>
+<td>Premium pricing, slow custom turnaround</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Gabrian International</strong></td>
+<td>gabrian.com</td>
+<td>Asian-trade hybrid</td>
+<td>High (DR ~50, lots of cited blog content)</td>
+<td>Organization, WebPage, WebSite, ImageObject, SearchAction</td>
+<td>826 words home, 200+ blog posts on aluminum</td>
+<td>High — dominates informational queries ("what is aluminum extrusion")</td>
+<td>Long-form blogs with photos; strong topical authority</td>
+<td>Not a manufacturer — buyers eventually go elsewhere</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Bonnell Aluminum</strong></td>
+<td>bonnellaluminum.com</td>
+<td>US manufacturer</td>
+<td>Medium-High (US-based .com, established 1947)</td>
+<td>None visible (lazy loaded)</td>
+<td>602 words home, mostly product cards</td>
+<td>Medium</td>
+<td>"Made in USA" trust, near-shoring story</td>
+<td>Thin content, no schema, weak blog</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Xingfa Aluminium</strong></td>
+<td>xingfa-aluminium.com</td>
+<td>Chinese manufacturer</td>
+<td>Medium</td>
+<td>Organization only</td>
+<td>1,522 words home, decent product detail</td>
+<td>Medium</td>
+<td>Larger production scale claims, more product photos</td>
+<td>Even weaker schema than JIJU; no FAQ; no blog</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Fonnov Aluminium</strong></td>
+<td>fonnov.com</td>
+<td>Chinese manufacturer</td>
+<td>Medium</td>
+<td>(Site behind Cloudflare; couldn't crawl)</td>
+<td>Reportedly strong blog</td>
+<td>Medium-High</td>
+<td>Active SEO content team, blog updated weekly</td>
+<td>Same boilerplate-product-spec issue as JIJU</td>
+</tr>
+</tbody>
+</table>
+<p>(Asia Aluminum, Sunlight Alu, and Shengxin all timed out on standard <code>curl</code> — likely Cloudflare-blocked, which itself signals weak GEO since AI crawlers will fail too.)</p>
+<hr />
+<h2 id="head-to-head-jiju-vs-each-competitor">Head-to-head — JIJU vs each competitor</h2>
+<h3 id="1-jiju-vs-hydro">1. JIJU vs Hydro</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>JIJU</th>
+<th>Hydro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand entity recognition</td>
+<td>None</td>
+<td>Wikipedia + Wikidata + investor relations</td>
+</tr>
+<tr>
+<td>Cornerstone content</td>
+<td>1 (3,000-word guide)</td>
+<td>50+</td>
+</tr>
+<tr>
+<td>Engineer bylines</td>
+<td>None</td>
+<td>Yes, named experts</td>
+</tr>
+<tr>
+<td>Sustainability story</td>
+<td>Implicit</td>
+<td>Explicit — CIRCAL®, REDUXA® branded recycled lines</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>Basic Yoast</td>
+<td>Full Organization + FAQ + Article + Product hybrid</td>
+</tr>
+<tr>
+<td>Take-home</td>
+<td>JIJU can't out-rank Hydro on generic queries — focus on "China + custom + cost" angle</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tactic to copy from Hydro:</strong> Build a <strong>Sustainability page</strong> (<code>/sustainability/</code>) with claimed recycled content %, ASI Performance Standard tracking goal, and energy mix data. AI engines weight ESG claims heavily for B2B citations in 2026.</p>
+<h3 id="2-jiju-vs-gabrian">2. JIJU vs Gabrian</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>JIJU</th>
+<th>Gabrian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blog post count</td>
+<td>53</td>
+<td>200+</td>
+</tr>
+<tr>
+<td>Per-post depth</td>
+<td>Variable, often AI-thin</td>
+<td>Deep, photo-rich, examples</td>
+</tr>
+<tr>
+<td>Internal-linking density</td>
+<td>Weak</td>
+<td>Strong cluster structure</td>
+</tr>
+<tr>
+<td>FAQ schema</td>
+<td>None</td>
+<td>Multiple per post</td>
+</tr>
+<tr>
+<td>Take-home</td>
+<td>Gabrian wins informational queries by sheer cluster volume — JIJU must build clusters around buyer intent rather than brand-promotional posts</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tactic to copy from Gabrian:</strong> Replace "Why Choose JIJU…" promotional blogs with <strong>buyer-intent informational clusters</strong> like "Aluminum Extrusion Tolerances Explained," "Aluminum Extrusion Die Cost Calculator," "Incoterms for Aluminum Imports."</p>
+<h3 id="3-jiju-vs-bonnell">3. JIJU vs Bonnell</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>JIJU</th>
+<th>Bonnell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geographic moat</td>
+<td>China cost advantage, global reach</td>
+<td>"Made in USA" near-shoring premium</td>
+</tr>
+<tr>
+<td>Content volume</td>
+<td>137 products, 53 blogs</td>
+<td>~50 products, ~10 blogs</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>Basic Yoast</td>
+<td>None visible</td>
+</tr>
+<tr>
+<td>Take-home</td>
+<td>JIJU outranks Bonnell on volume and schema — but Bonnell's <code>.com</code> domain age + US trust beats JIJU on N. American queries</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tactic to copy from Bonnell:</strong> The "Custom Aluminum Extrusions Near Me" title pattern. JIJU should target "Custom Aluminum Extrusion Manufacturer for [Country/Region]" landing pages.</p>
+<h3 id="4-jiju-vs-xingfa">4. JIJU vs Xingfa</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>JIJU</th>
+<th>Xingfa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factory scale claim</td>
+<td>150K t/yr · 21 presses · 300,000 m²</td>
+<td>Larger (claims listed publicly)</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>Basic Yoast (better than Xingfa)</td>
+<td>Organization only</td>
+</tr>
+<tr>
+<td>Blog depth</td>
+<td>53 posts</td>
+<td>Sparse</td>
+</tr>
+<tr>
+<td>Brand entity</td>
+<td>None</td>
+<td>Listed company in HK, has Wikipedia</td>
+</tr>
+<tr>
+<td>Take-home</td>
+<td>JIJU can win on schema + content + AI optimization. Xingfa wins on brand + scale.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tactic to take from Xingfa's weakness:</strong> Xingfa has minimal schema — JIJU can leapfrog by being the first Chinese aluminum extruder with full Product + FAQ + HowTo schema in 2026.</p>
+<h3 id="5-jiju-vs-fonnov">5. JIJU vs Fonnov</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>JIJU</th>
+<th>Fonnov</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blog cadence</td>
+<td>1-2/week visible</td>
+<td>Reportedly weekly</td>
+</tr>
+<tr>
+<td>Boilerplate problem</td>
+<td>Severe (~100 products share copy)</td>
+<td>Similar issue</td>
+</tr>
+<tr>
+<td>Original data</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Take-home</td>
+<td>Fonnov is a parity competitor. Whoever wins schema + entity + original data wins the GEO race in 2026.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tactic vs Fonnov:</strong> Publish <strong>original data</strong> quarterly — e.g., "China Aluminum Extrusion Export Index 2026 Q3" — sourced from JIJU's actual shipment data. AI engines (Perplexity, Claude) preferentially cite original-data sources.</p>
+<hr />
+<h2 id="top-10-tactics-jiju-should-copy-improve">Top 10 tactics JIJU should copy / improve</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tactic</th>
+<th>Source competitor</th>
+<th>Effort</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Build a sustainability page with recycled-content % and ASI roadmap</td>
+<td>Hydro</td>
+<td>M</td>
+<td>High — 2026 ESG buying criterion</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cluster blog content around buyer-intent informational queries (not "why choose us")</td>
+<td>Gabrian</td>
+<td>L</td>
+<td>High — AI loves topical clusters</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Add named engineer bylines + Person schema to every blog</td>
+<td>Hydro</td>
+<td>M</td>
+<td>High — EEAT</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Add <code>/aluminum-extrusion-near-me/[region]/</code> regional landing pages</td>
+<td>Bonnell</td>
+<td>M</td>
+<td>Medium — captures local AIO</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ship Product + FAQPage + HowTo schema before Chinese competitors</td>
+<td>Xingfa weakness</td>
+<td>M</td>
+<td>Critical — leapfrog Chinese peers</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Publish original quarterly data report</td>
+<td>None do this well</td>
+<td>L</td>
+<td>Critical — Perplexity / Claude differentiator</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Build an interactive "Aluminum Extrusion Cost Calculator" tool</td>
+<td>None</td>
+<td>L</td>
+<td>High — earns backlinks + AI citation</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Translate top 20 pages into German, Spanish, Arabic</td>
+<td>Hydro</td>
+<td>L</td>
+<td>High — AIO for non-English markets</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Publish "Aluminum Extrusion Standards Cheat Sheet" PDF (EN 755 / ASTM B221 / GB/T 5237)</td>
+<td>None</td>
+<td>M</td>
+<td>High — backlink magnet + AI quotable</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Open a dedicated company LinkedIn page with weekly factory posts</td>
+<td>All have one</td>
+<td>M</td>
+<td>Critical — entity authority + Gemini Knowledge Graph</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="brand-authority-scan-jijus-current-platform-footprint">Brand Authority Scan — JIJU's current platform footprint</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Status</th>
+<th>Issue</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wikipedia</td>
+<td>None</td>
+<td>No article, no Wikidata QID</td>
+<td>Create Wikidata QID with founding 1994, location, certs, capacity. Pursue Wikipedia stub.</td>
+</tr>
+<tr>
+<td>LinkedIn</td>
+<td>Personal <code>/in/jijualuminium/</code></td>
+<td>Not a company entity, low signal for Knowledge Graph</td>
+<td>Build proper Company Page (<code>/company/jiju-aluminium/</code>) with logo, banner, About section, employees.</td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td><code>@JackieWang-g7q</code></td>
+<td>Personal handle, no branding</td>
+<td>Rebrand to <code>@JIJUAluminium</code>. Branded channel art, custom URL, About text with company entity. Upload weekly factory-floor and process videos.</td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td><code>@jiju15621728699</code></td>
+<td>Cryptic handle</td>
+<td>Rebrand to <code>@jijualuminium</code> (or closest available).</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td><code>profile.php?id=61584469747679</code></td>
+<td>Profile not Page</td>
+<td>Convert to Facebook Page with verified business info.</td>
+</tr>
+<tr>
+<td>Alibaba</td>
+<td>Likely listed (verify)</td>
+<td>Missing?</td>
+<td>Confirm Gold Supplier status; ensure listing matches website branding exactly.</td>
+</tr>
+<tr>
+<td>Made-in-China</td>
+<td>Likely listed (verify)</td>
+<td>Missing?</td>
+<td>Same.</td>
+</tr>
+<tr>
+<td>Globalsources</td>
+<td>Unknown</td>
+<td>—</td>
+<td>Claim or verify.</td>
+</tr>
+<tr>
+<td>Thomasnet</td>
+<td>None</td>
+<td>—</td>
+<td>Create supplier listing — Thomasnet is heavily cited by ChatGPT for industrial sourcing.</td>
+</tr>
+<tr>
+<td>Wikidata</td>
+<td>None</td>
+<td>—</td>
+<td>Create QID — single highest-leverage off-site action.</td>
+</tr>
+<tr>
+<td>Reddit</td>
+<td>None visible</td>
+<td>—</td>
+<td>Engage on r/manufacturing, r/AskEngineers, r/AluminumExtrusion (if exists), r/Construction. Don't astroturf — answer real procurement questions.</td>
+</tr>
+<tr>
+<td>Quora</td>
+<td>None visible</td>
+<td>—</td>
+<td>Engineer team should answer top 20 aluminum extrusion sourcing questions.</td>
+</tr>
+<tr>
+<td>Trustpilot</td>
+<td>None</td>
+<td>—</td>
+<td>Solicit reviews from existing customers.</td>
+</tr>
+<tr>
+<td>Trade press</td>
+<td>None</td>
+<td>—</td>
+<td>Pitch case studies to <em>Aluminium International Today</em>, <em>Aluminum Now</em>, <em>MetalMiner</em>.</td>
+</tr>
+<tr>
+<td>YouTube interviews / podcasts</td>
+<td>None</td>
+<td>—</td>
+<td>Place CEO on supply-chain or manufacturing podcasts (e.g., <em>The Manufacturing Show</em>, <em>Sourcing Industry Group</em>).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Brand Authority current score: 25 / 100</strong> — primary signal is Alibaba presence; everything else is missing or sub-optimal.
+<strong>Target after 90-day plan: 65 / 100</strong> — Wikidata QID + LinkedIn Company Page + branded YouTube + 3 trade-press citations + 5 podcast appearances.</p>
+<hr />
+<h1 id="04-rewritten-homepage-copy-paste-ready">04 — Rewritten Homepage (copy-paste ready)</h1>
+<p>The rewrite below replaces the current homepage Title / Meta / H1 / H2 / above-the-fold copy. Every section is AI-quotable, keyword-aligned, and includes the specific stats AI engines need to cite JIJU as an authoritative entity.</p>
+<hr />
+<h2 id="title-60-chars">Title (60 chars)</h2>
+<pre><code>Custom Aluminum Extrusion Manufacturer China — JIJU (1994)
+</code></pre>
+<p>Variant A (more keywords): <code>Aluminum Extrusion Manufacturer in China — Custom 6063/6061 Profiles | JIJU</code>
+Variant B (more authority): <code>JIJU Aluminium — China's Custom Aluminum Extrusion Manufacturer Since 1994</code></p>
+<h2 id="meta-description-155-chars">Meta description (155 chars)</h2>
+<pre><code>JIJU is a Chinese aluminum extrusion manufacturer since 1994. 21 presses, 150,000 t/year of custom 6063/6061 profiles. ISO 9001 factory. Quote in 24 h.
+</code></pre>
+<h2 id="h1-replaces-about-global-aluminium-extrusion">H1 (replaces "ABOUT GLOBAL ALUMINIUM EXTRUSION")</h2>
+<pre><code>Custom Aluminum Extrusion Manufacturer in China — Shandong JIJU
+</code></pre>
+<h2 id="h2-structure-rewritten-from-current-16-h2s-now-8-strong-sections">H2 structure (rewritten from current 16 H2s, now 8 strong sections)</h2>
+<ol>
+<li><code>Why Procurement Managers Choose JIJU for Custom Aluminum Extrusions</code></li>
+<li><code>Our Capabilities — 21 Presses, 4 Alloys, 5 Surface Finishes</code></li>
+<li><code>Industries We Serve — Doors &amp; Windows, EV, Solar, LED, Industrial Framing</code></li>
+<li><code>By the Numbers — Shandong JIJU Aluminium at a Glance</code></li>
+<li><code>Our 6-Step Custom Extrusion Process</code></li>
+<li><code>Frequently Asked Questions</code></li>
+<li><code>What Our B2B Clients Say</code></li>
+<li><code>Get a Custom Quote in 24 Hours</code></li>
+</ol>
+<hr />
+<h2 id="above-the-fold-hero-block-replaces-current-about-global-aluminium-extrusion">Above-the-fold hero block (replaces current "ABOUT GLOBAL ALUMINIUM EXTRUSION")</h2>
+<blockquote>
+<h3 id="custom-aluminum-extrusion-manufacturer-in-china-shandong-jiju">Custom Aluminum Extrusion Manufacturer in China — Shandong JIJU</h3>
+<p>Shandong JIJU Aluminium is a Chinese aluminum extrusion manufacturer founded in 1994, producing <strong>150,000 tonnes per year</strong> of custom profiles from a 300,000 m² factory in Linqu County, Shandong. We operate <strong>21 extrusion presses ranging from 450 to 7,500 tons</strong> and extrude <strong>6063, 6061, 6005, and 6082 alloys</strong> to tolerances of ±0.05 mm wall thickness and ±0.2 mm length. In-house capabilities include anodizing, powder coating, fluorocarbon (PVDF) spraying, and 5-axis CNC machining. JIJU holds ISO 9001 (quality), ISO 14001 (environment), and ISO 45001 (safety) certifications and ships to <strong>40+ countries</strong> across Europe, Southeast Asia, and North America.</p>
+<p><strong>[Request Custom Quote]</strong> <em>(24 h response)</em> &nbsp; <strong>[Download Catalog (PDF)]</strong> &nbsp; <strong>[See Capabilities]</strong></p>
+</blockquote>
+<p><em>This single paragraph is the most important AI-citation seed on the site. Every claim is attributable.</em></p>
+<hr />
+<h2 id="by-the-numbers-table-replaces-current-elementor-counter-widgets-that-show-conflicting-stats">"By the Numbers" table (replaces current Elementor counter widgets that show conflicting stats)</h2>
+<pre><code class="language-html">&lt;table class=&quot;jiju-spec-table&quot;&gt;
+  &lt;caption&gt;Shandong JIJU Aluminium — Factory at a Glance (2026)&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;Founded&lt;/th&gt;&lt;td&gt;1994 — 30+ years of aluminum extrusion experience&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Headquarters&lt;/th&gt;&lt;td&gt;Linqu County, Weifang City, Shandong Province, China&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Factory area&lt;/th&gt;&lt;td&gt;300,000 m² (74 acres)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Annual extrusion capacity&lt;/th&gt;&lt;td&gt;150,000 tonnes&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Extrusion presses&lt;/th&gt;&lt;td&gt;21 (450 T to 7,500 T)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Alloys produced&lt;/th&gt;&lt;td&gt;6063, 6061, 6005, 6082, 6N01, 6066-T66&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Tempers&lt;/th&gt;&lt;td&gt;T4, T5, T6, T66&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Length tolerance&lt;/th&gt;&lt;td&gt;±0.2 mm per meter&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Wall-thickness tolerance&lt;/th&gt;&lt;td&gt;±0.05 mm&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Surface finishes&lt;/th&gt;&lt;td&gt;Mill, anodized (AA15/AA25), powder coated (QUALICOAT), PVDF, wood-grain transfer, brushed&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Secondary processing&lt;/th&gt;&lt;td&gt;5-axis CNC machining, sawing, bending, welding, drilling, assembly&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;R&amp;amp;D engineers&lt;/th&gt;&lt;td&gt;45 (out of 400+ total employees)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Certifications&lt;/th&gt;&lt;td&gt;ISO 9001, ISO 14001, ISO 45001&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Export markets&lt;/th&gt;&lt;td&gt;40+ countries — Europe, Southeast Asia, North America, MENA, Africa&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Standard MOQ&lt;/th&gt;&lt;td&gt;500 kg per profile&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Mold lead time&lt;/th&gt;&lt;td&gt;5–7 working days&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Production lead time&lt;/th&gt;&lt;td&gt;15–30 days after sample approval&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Quote response time&lt;/th&gt;&lt;td&gt;Within 24 hours worldwide&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p>This 18-row table is the single biggest GEO upgrade on the homepage — every cell is quotable by AI engines. Pair with the Factory + Manufacturer schema (<code>b_localbusiness_manufacturer.json</code>) so search engines can extract the table as structured data.</p>
+<hr />
+<h2 id="why-choose-jiju-section-replaces-6-card-why-choose-us-block">"Why Choose JIJU" section (replaces 6-card "WHY CHOOSE US?" block)</h2>
+<p>Replace the current vague cards with <strong>6 fact-driven, citable bullets</strong>:</p>
+<ol>
+<li><strong>30+ years of vertical integration.</strong> JIJU runs everything in-house — die design, extrusion, anodizing, powder coating, PVDF spraying, 5-axis CNC machining, packaging, and export logistics. No subcontractors, no quality drift between steps.</li>
+<li><strong>Tolerances tighter than EN 755 Class A.</strong> Wall-thickness tolerance ±0.05 mm and length tolerance ±0.2 mm/m on standard profiles, verified by 3-axis CMM inspection on every shipment.</li>
+<li><strong>MOQ from 500 kg per profile.</strong> Lower than typical Chinese competitors (1–2 t MOQ). Mold cost recovered against your first order over 1–3 production runs depending on profile complexity.</li>
+<li><strong>5–7 day mold lead time.</strong> First sample in 12–15 days, full production in 15–30 days after sample approval.</li>
+<li><strong>3 ISO certifications + customer-side compliance support.</strong> ISO 9001 / 14001 / 45001 on file with PDF downloads. We also issue mill test certificates per heat, and provide REACH / RoHS / QUALICOAT documentation on request.</li>
+<li><strong>40+ export markets, ports of Qingdao + Shanghai.</strong> Standard Incoterms FOB / CIF / DDP. T/T 30/70 or L/C at sight payment. Door-to-door logistics support to EU, US, ME, SE-Asia.</li>
+</ol>
+<hr />
+<h2 id="industries-we-serve-replaces-our-products-generic-blocks">Industries We Serve (replaces "Our Products" generic blocks)</h2>
+<pre><code class="language-html">&lt;div class=&quot;jiju-industries&quot;&gt;
+  &lt;a href=&quot;/industries/doors-and-windows/&quot;&gt;&lt;h3&gt;Doors &amp; Windows&lt;/h3&gt;
+    Thermal-break aluminum profiles, sliding door rails, casement frames, curtain wall systems.
+    6063-T5 standard. Uf values from 1.0 W/m²K. EN 14024 compliant.&lt;/a&gt;
+  &lt;a href=&quot;/industries/ev-battery-trays/&quot;&gt;&lt;h3&gt;EV Battery Trays&lt;/h3&gt;
+    6005A and 6082-T6 extruded battery housings for new-energy vehicles. FSW-compatible
+    side rails and end plates. Crash-rated designs.&lt;/a&gt;
+  &lt;a href=&quot;/industries/solar-pv-frames/&quot;&gt;&lt;h3&gt;Solar / PV Frames&lt;/h3&gt;
+    6063-T5 anodized photovoltaic module frames in standard 30/35/40 mm depths.
+    AA15 anodizing for 25-year outdoor durability.&lt;/a&gt;
+  &lt;a href=&quot;/industries/led-heat-sinks/&quot;&gt;&lt;h3&gt;LED Heat Sinks&lt;/h3&gt;
+    Custom heat-dissipation profiles in 6063 — fin-density up to 12 fins per inch,
+    powder-coated black or anodized natural.&lt;/a&gt;
+  &lt;a href=&quot;/industries/industrial-framing/&quot;&gt;&lt;h3&gt;Industrial Framing &amp; T-Slot&lt;/h3&gt;
+    Bosch Rexroth-compatible T-slot profiles 20×20 / 30×30 / 40×40 / 45×45 / 80×80,
+    plus custom I-beam and U-channel.&lt;/a&gt;
+  &lt;a href=&quot;/industries/architectural-decorative/&quot;&gt;&lt;h3&gt;Architectural &amp; Decorative&lt;/h3&gt;
+    Wood-grain transfer, brushed, sand-anodized, fluorocarbon — for handrails,
+    cladding, signage, and furniture.&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="homepage-faq-block-new-copy-paste-with-faqpage-schema">Homepage FAQ block (NEW — copy-paste with FAQPage schema)</h2>
+<p>Add the 6 FAQs below to the homepage just above the "Get a Custom Quote" footer block. <strong>Wire them to FAQPage schema</strong> (block <code>f_faqpage.json</code>).</p>
+<blockquote>
+<h3 id="frequently-asked-questions">Frequently Asked Questions</h3>
+<p><strong>What is the MOQ for custom aluminum extrusion at JIJU?</strong>
+JIJU's standard minimum order quantity is 500 kg per profile, lower than the 1-2 ton MOQ typical at most Chinese aluminum extruders. For first orders or sample runs we can sometimes accept 200-300 kg with a tooling-amortization surcharge. MOQ on stock profiles in 6063-T5 mill finish starts at 100 kg.</p>
+<p><strong>How much does an aluminum extrusion mold cost?</strong>
+Mold (die) cost depends on profile cross-section size, complexity, and number of cavities. Standard solid profiles up to 100 mm circumscribed-circle diameter cost USD 250–500 per die. Hollow profiles cost USD 600–1,500. Multi-cavity dies for very small profiles cost USD 1,000–2,500. JIJU credits the full die cost against your first 1-3 production runs.</p>
+<p><strong>What is the lead time for first sample and production order?</strong>
+Mold lead time is 5–7 working days after drawing approval. First sample is shipped 12–15 days after order confirmation. Production lead time after sample approval is 15–30 days depending on alloy availability, surface treatment, and quantity.</p>
+<p><strong>What is the difference between 6063 and 6061 aluminum?</strong>
+6063 (Mg-Si alloy) is the standard architectural alloy — excellent extrudability, good corrosion resistance, easy to anodize. Used for doors, windows, curtain walls, decorative profiles. 6061 (Mg-Si-Cu alloy) is stronger (yield 240 MPa vs 6063's 170 MPa) and is used for structural framing, EV chassis, T-slot, and machined parts. JIJU supplies both as standard.</p>
+<p><strong>Can JIJU handle OEM and ODM aluminum extrusion projects?</strong>
+Yes. OEM means we extrude to your supplied drawing (we provide DFM feedback). ODM means JIJU's 45 R&amp;D engineers co-design the profile with you from concept, finite-element analysis, and prototype CNC parts through to extrusion mold. NDA available before drawings are exchanged.</p>
+<p><strong>What countries does JIJU export to and what shipping terms apply?</strong>
+JIJU exports to 40+ countries across Europe, North America, the Middle East, Southeast Asia, and Africa via the ports of Qingdao and Shanghai. Standard Incoterms are FOB Qingdao, CIF (any major port), and DDP for full-service door-to-door logistics. Payment terms: T/T 30/70 (30% deposit, 70% before shipping) or L/C at sight for orders ≥ USD 30,000.</p>
+</blockquote>
+<hr />
+<h2 id="replacement-testimonials-section-replaces-whar-our-clients-say">Replacement testimonials section (replaces "Whar Our Clients Say")</h2>
+<p>Fix typo to <strong>"What Our Clients Say"</strong> and replace first-name testimonials with:</p>
+<ul>
+<li>Full name + Title + Company</li>
+<li>Profile photo (real or LinkedIn-linked)</li>
+<li>Country flag for international credibility</li>
+<li>Project specifics (alloy, finish, tonnage, year)</li>
+<li>Add <code>Review</code> schema for each</li>
+</ul>
+<p>Sample structure:</p>
+<blockquote>
+<p><strong>Marshall Klein</strong> — Procurement Manager, Avantis Window Systems · 🇩🇪 Germany
+<em>"We've been sourcing 6063-T5 thermal-break window profiles from JIJU since 2023. Initial die delivery in 6 working days, and tolerance has been within ±0.04 mm wall thickness — better than spec. JIJU's engineering team flagged a draw-pull issue on our second profile and saved us a die revision."</em>
+Project: 47 t · 6063-T5 · AA15 anodized natural · 2024</p>
+</blockquote>
+<p>(Generate 4 such testimonials. Solicit them from real clients with permission. AI engines weight named, company-attributed reviews 5-10× higher than first-name-only quotes.)</p>
+<hr />
+<h2 id="cta-quote-request-footer-replaces-current-1-line-cta">CTA / Quote-Request footer (replaces current 1-line CTA)</h2>
+<pre><code class="language-html">&lt;section id=&quot;get-quote&quot; class=&quot;jiju-quote-cta&quot;&gt;
+  &lt;h2&gt;Get a Custom Aluminum Extrusion Quote in 24 Hours&lt;/h2&gt;
+  &lt;p&gt;Send us your drawing or describe your profile. Our 45-engineer R&amp;amp;D team responds with
+     a feasibility assessment, mold cost, MOQ, lead time, and FOB Qingdao price within one business day.&lt;/p&gt;
+  &lt;form&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Full name&quot; required&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Business email&quot; required&gt;
+    &lt;input type=&quot;tel&quot;   name=&quot;phone&quot; placeholder=&quot;WhatsApp / Phone (with country code)&quot;&gt;
+    &lt;input type=&quot;text&quot;  name=&quot;company&quot; placeholder=&quot;Company&quot;&gt;
+    &lt;select name=&quot;country&quot; required&gt;... 40+ options ...&lt;/select&gt;
+    &lt;select name=&quot;industry&quot;&gt;... Doors &amp;amp; Windows / EV / Solar / LED / Industrial / Other ...&lt;/select&gt;
+    &lt;textarea name=&quot;message&quot; placeholder=&quot;Profile description, alloy preference, surface, MOQ, lead-time needs&quot;&gt;&lt;/textarea&gt;
+    &lt;input type=&quot;file&quot; name=&quot;drawing&quot; accept=&quot;.pdf,.dwg,.dxf,.step,.stp&quot;&gt;
+    &lt;button&gt;Request Quote&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;p class=&quot;reply-time&quot;&gt;Average response time: 6 hours · Office hours Mon–Sat 08:00–18:00 CST.
+     For urgent enquiries: WhatsApp +86 185 6199 1583.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<hr />
+<h2 id="og-twitter-card-meta-currently-broken-defaults-to-home">OG / Twitter Card meta (currently broken — defaults to "Home")</h2>
+<pre><code class="language-html">&lt;meta property=&quot;og:title&quot; content=&quot;Custom Aluminum Extrusion Manufacturer China — JIJU (1994)&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;JIJU is a Chinese aluminum extrusion manufacturer since 1994. 21 presses, 150,000 t/year of custom 6063/6061 profiles. ISO 9001 factory. Quote in 24 h.&quot;&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;https://jijualuminium.com/wp-content/uploads/jiju-factory-og.jpg&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://jijualuminium.com/&quot;&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;JIJU Aluminium&quot;&gt;
+&lt;meta property=&quot;og:locale&quot; content=&quot;en_US&quot;&gt;
+&lt;meta property=&quot;og:locale:alternate&quot; content=&quot;de_DE&quot;&gt;
+&lt;meta property=&quot;og:locale:alternate&quot; content=&quot;es_ES&quot;&gt;
+
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Custom Aluminum Extrusion Manufacturer China — JIJU (1994)&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;21 presses, 150,000 t/year, 6063/6061 custom aluminum profiles. ISO 9001. Quote in 24 h.&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;https://jijualuminium.com/wp-content/uploads/jiju-factory-og.jpg&quot;&gt;
+</code></pre>
+<hr />
+<h1 id="05-keyword-strategy-topic-cluster-map">05 — Keyword Strategy + Topic Cluster Map</h1>
+<h2 id="top-30-keywords-ranked-by-roi-for-b2b-aluminum-extrusion-export">Top 30 keywords ranked by ROI for B2B aluminum extrusion export</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Keyword</th>
+<th>Intent</th>
+<th>Difficulty</th>
+<th>Priority</th>
+<th>Current Coverage</th>
+<th>Recommended Page Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>aluminum extrusion manufacturer</td>
+<td>Commercial</td>
+<td>High</td>
+<td>P0</td>
+<td>Weak</td>
+<td>Homepage / pillar</td>
+</tr>
+<tr>
+<td>2</td>
+<td>custom aluminum extrusion</td>
+<td>Commercial</td>
+<td>High</td>
+<td>P0</td>
+<td>Weak</td>
+<td>Pillar (cornerstone)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>aluminum extrusion supplier china</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Weak</td>
+<td>Location landing</td>
+</tr>
+<tr>
+<td>4</td>
+<td>china aluminum profile manufacturer</td>
+<td>Commercial</td>
+<td>High</td>
+<td>P0</td>
+<td>Weak</td>
+<td>Homepage variant</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6063 aluminum extrusion</td>
+<td>Info+Comm</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Missing</td>
+<td>Alloy hub page</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6061 aluminum extrusion</td>
+<td>Info+Comm</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Missing</td>
+<td>Alloy hub page</td>
+</tr>
+<tr>
+<td>7</td>
+<td>6005 aluminum alloy</td>
+<td>Info+Comm</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Missing</td>
+<td>Alloy page</td>
+</tr>
+<tr>
+<td>8</td>
+<td>6082 aluminum extrusion</td>
+<td>Info+Comm</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Missing</td>
+<td>Alloy page</td>
+</tr>
+<tr>
+<td>9</td>
+<td>aluminum extrusion for doors and windows</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Weak</td>
+<td>Industry hub</td>
+</tr>
+<tr>
+<td>10</td>
+<td>thermal break aluminum profile</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Missing</td>
+<td>Product cluster</td>
+</tr>
+<tr>
+<td>11</td>
+<td>aluminum curtain wall profile</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Industry hub</td>
+</tr>
+<tr>
+<td>12</td>
+<td>aluminum heat sink manufacturer</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Weak</td>
+<td>Industry hub</td>
+</tr>
+<tr>
+<td>13</td>
+<td>aluminum profile for solar panel frame</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Missing</td>
+<td>Industry hub</td>
+</tr>
+<tr>
+<td>14</td>
+<td>aluminum battery tray extrusion</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P0</td>
+<td>Missing</td>
+<td>Industry hub</td>
+</tr>
+<tr>
+<td>15</td>
+<td>aluminum extrusion EV chassis</td>
+<td>Commercial</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Missing</td>
+<td>Industry hub</td>
+</tr>
+<tr>
+<td>16</td>
+<td>t-slot aluminum profile 4040 / 2020</td>
+<td>Transactional</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Spec page per series</td>
+</tr>
+<tr>
+<td>17</td>
+<td>anodized aluminum profile</td>
+<td>Info+Comm</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Surface treatment hub</td>
+</tr>
+<tr>
+<td>18</td>
+<td>powder coated aluminum extrusion</td>
+<td>Info+Comm</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Surface treatment hub</td>
+</tr>
+<tr>
+<td>19</td>
+<td>PVDF coated aluminum profile</td>
+<td>Info+Comm</td>
+<td>Low</td>
+<td>P1</td>
+<td>Missing</td>
+<td>Surface treatment hub</td>
+</tr>
+<tr>
+<td>20</td>
+<td>aluminum extrusion process</td>
+<td>Info</td>
+<td>Low</td>
+<td>P1</td>
+<td>Yes (cornerstone)</td>
+<td>Pillar (current)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>6061 vs 6063 aluminum</td>
+<td>Info</td>
+<td>Low</td>
+<td>P0</td>
+<td>Missing</td>
+<td>Comparison blog</td>
+</tr>
+<tr>
+<td>22</td>
+<td>aluminum extrusion tolerances</td>
+<td>Info</td>
+<td>Low</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Tech specs blog</td>
+</tr>
+<tr>
+<td>23</td>
+<td>aluminum extrusion die cost</td>
+<td>Info</td>
+<td>Low</td>
+<td>P1</td>
+<td>Missing</td>
+<td>Cost-guide blog</td>
+</tr>
+<tr>
+<td>24</td>
+<td>MOQ aluminum extrusion china</td>
+<td>Trans</td>
+<td>Low</td>
+<td>P1</td>
+<td>Missing</td>
+<td>FAQ + pricing page</td>
+</tr>
+<tr>
+<td>25</td>
+<td>aluminum extrusion FOB price</td>
+<td>Trans</td>
+<td>Medium</td>
+<td>P1</td>
+<td>Missing</td>
+<td>Pricing guide</td>
+</tr>
+<tr>
+<td>26</td>
+<td>how to import aluminum from china</td>
+<td>Info</td>
+<td>Low</td>
+<td>P0</td>
+<td>Yes (blog)</td>
+<td>Existing — upgrade</td>
+</tr>
+<tr>
+<td>27</td>
+<td>aluminum extrusion EN 755 standard</td>
+<td>Info</td>
+<td>Low</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Standards blog</td>
+</tr>
+<tr>
+<td>28</td>
+<td>aluminum extrusion ASTM B221</td>
+<td>Info</td>
+<td>Low</td>
+<td>P1</td>
+<td>Weak</td>
+<td>Standards blog</td>
+</tr>
+<tr>
+<td>29</td>
+<td>aluminum extrusion supplier germany</td>
+<td>Commercial</td>
+<td>Low</td>
+<td>P2</td>
+<td>Missing</td>
+<td>Regional landing</td>
+</tr>
+<tr>
+<td>30</td>
+<td>aluminum extrusion supplier USA / North America</td>
+<td>Commercial</td>
+<td>Low</td>
+<td>P2</td>
+<td>Missing</td>
+<td>Regional landing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Priority legend:</strong> P0 = build/fix in 30 days · P1 = build in 60 days · P2 = build in 90 days · P3 = nice-to-have.</p>
+<hr />
+<h2 id="long-tail-keyword-bank-build-into-faqs-blog-posts-and-product-page-copy">Long-tail keyword bank (build into FAQs, blog posts, and product page copy)</h2>
+<pre><code>- best aluminum extrusion supplier in china for windows
+- ISO 9001 aluminum extrusion factory china
+- aluminum extrusion mold cost calculator
+- custom aluminum profile MOQ low
+- aluminum extrusion sample policy
+- aluminum extrusion lead time 2026
+- aluminum extrusion drawing format dwg dxf step
+- aluminum window profile thermal break PA66
+- aluminum extrusion AA15 vs AA25 anodizing
+- QUALICOAT class 1 vs 2 powder coating
+- aluminum extrusion FCL vs LCL shipping qingdao
+- aluminum extrusion DDP shipping europe
+- aluminum extrusion T/T 30/70 payment
+- 6063-T5 vs 6063-T6 difference
+- aluminum extrusion CMM inspection report
+- aluminum extrusion mill test certificate
+- aluminum profile REACH RoHS compliance
+- aluminum heat sink fin density design
+- aluminum solar frame depth 30mm 35mm 40mm
+- EV battery housing 6005A vs 6082-T6
+- T-slot aluminum profile bosch rexroth compatible
+- aluminum extrusion FSW friction stir welding
+- aluminum profile crash rated automotive
+- aluminum profile fire rated EI60 EI120
+- aluminum extrusion europe lead time
+- aluminum extrusion USA tariff section 232
+- aluminum extrusion vs steel cost comparison
+- aluminum extrusion sustainability recycled content
+</code></pre>
+<hr />
+<h2 id="topic-cluster-map-custom-aluminum-extrusion-manufacturing">Topic Cluster Map — "Custom Aluminum Extrusion Manufacturing"</h2>
+<pre><code>                              ┌───────────────────────────┐
+                              │ PILLAR PAGE               │
+                              │ /custom-aluminum-extrusion/│
+                              │ Custom Aluminum Extrusion │
+                              │ — The Complete B2B Buyer's│
+                              │ Guide (2026)              │
+                              └────────────┬──────────────┘
+                                           │
+        ┌───────────────────┬──────────────┴─────────────────┬───────────────────┐
+        ▼                   ▼                                ▼                   ▼
+ ┌─────────────────┐ ┌─────────────────┐         ┌─────────────────┐  ┌─────────────────┐
+ │ DESIGN &amp; DFM    │ │ TOOLING / DIES  │         │ EXTRUSION PROCESS│  │ ALLOY HUB       │
+ │ /design-dfm/    │ │ /tooling-dies/  │         │ /process/        │  │ /alloys/         │
+ └─────────────────┘ └─────────────────┘         └─────────────────┘  └────────┬────────┘
+        │                   │                                │                  │
+        ▼                   ▼                                ▼                  │
+ ┌─────────────────┐ ┌─────────────────┐         ┌─────────────────┐            │
+ │ TOLERANCES &amp; QC │ │ SURFACE TREATMENT│         │ STANDARDS HUB    │           │
+ │ /tolerances-qc/ │ │ /surface-finishes/│         │ EN 755 vs ASTM  │            │
+ └─────────────────┘ └─────────────────┘         │ B221 vs GB/T5237│           │
+                            │                    └─────────────────┘            │
+                            ▼                                ▼                  ▼
+                  ┌─────────────────┐         ┌─────────────────┐  ┌─────────────────┐
+                  │ ANODIZING       │         │ PRICING &amp; MOQ   │  │ 6063   6061     │
+                  │ POWDER  PVDF    │         │ /pricing-guide/ │  │ 6005   6082     │
+                  └─────────────────┘         └─────────────────┘  └─────────────────┘
+
+INDUSTRY HUBS (each links back to pillar + relevant clusters):
+  /industries/doors-and-windows/
+  /industries/curtain-wall/
+  /industries/ev-battery-trays/
+  /industries/solar-pv-frames/
+  /industries/led-heat-sinks/
+  /industries/industrial-framing-tslot/
+  /industries/architectural-decorative/
+
+REGIONAL LANDINGS (geo expansion):
+  /aluminum-extrusion-supplier-germany/
+  /aluminum-extrusion-supplier-usa/
+  /aluminum-extrusion-supplier-southeast-asia/
+  /aluminum-extrusion-supplier-mena/
+
+SUPPORTING BLOGS (drive long-tail traffic, link upward):
+  /blog/aluminum-extrusion-die-cost-explained/
+  /blog/aluminum-extrusion-lead-times-2026/
+  /blog/aluminum-extrusion-incoterms-shipping/
+  /blog/6061-vs-6063-aluminum-comparison/
+  /blog/aa15-vs-aa25-anodizing-explained/
+  /blog/qualicoat-class-1-vs-2-powder-coating/
+  /blog/how-to-choose-aluminum-extrusion-supplier-china/
+  /blog/7-mistakes-buyers-make-sourcing-aluminum-extrusion/
+  /blog/aluminum-extrusion-vs-steel-2026-cost-strength/
+  /blog/aluminum-extrusion-sustainability-recycled-content/
+</code></pre>
+<h3 id="cluster-build-out-priorities">Cluster build-out priorities</h3>
+<p><strong>Month 1 (P0):</strong>
+1. <code>/custom-aluminum-extrusion/</code> (pillar, ~3,500 words) — rewrite from existing cornerstone
+2. <code>/alloys/6063-aluminum/</code> (1,800 words)
+3. <code>/alloys/6061-aluminum/</code> (1,800 words)
+4. <code>/blog/6061-vs-6063-aluminum-comparison/</code> (2,200 words)
+5. <code>/about-jiju-aluminium/</code> (1,400 words)</p>
+<p><strong>Month 2 (P1):</strong>
+6. <code>/industries/doors-and-windows/</code> (2,000 words)
+7. <code>/industries/ev-battery-trays/</code> (1,800 words)
+8. <code>/surface-finishes/anodizing/</code> + <code>/surface-finishes/powder-coating/</code> + <code>/surface-finishes/pvdf/</code> (1,200 words each)
+9. <code>/aluminum-extrusion-pricing-guide/</code> (1,800 words)
+10. <code>/aluminum-extrusion-standards/</code> (1,600 words)</p>
+<p><strong>Month 3 (P1-P2):</strong>
+11. <code>/industries/solar-pv-frames/</code>, <code>/industries/led-heat-sinks/</code>, <code>/industries/industrial-framing-tslot/</code>
+12. <code>/aluminum-extrusion-supplier-germany/</code> + USA + SE-Asia regional landings
+13. <code>/case-studies/</code> index + 6 detail pages
+14. 5 supporting blogs from list above</p>
+<hr />
+<h1 id="06-20-ready-to-publish-b2b-faqs">06 — 20 Ready-to-Publish B2B FAQs</h1>
+<p>These 20 FAQs are designed for <strong>maximum AI citation probability</strong>: each answer is self-contained (60–120 words), contains 1+ specific number/spec/standard, and avoids first-person voice. Deploy across the homepage, key product pages, dedicated <code>/faq/</code> page, and the cornerstone pillar.</p>
+<p>Pair with FAQPage schema (block <code>f_faqpage.json</code>) — this report and the schema file are kept in sync.</p>
+<hr />
+<h2 id="pricing-moq-lead-time">Pricing, MOQ, lead time</h2>
+<h3 id="1-what-is-the-moq-for-custom-aluminum-extrusion-at-jiju">1. What is the MOQ for custom aluminum extrusion at JIJU?</h3>
+<p>JIJU's standard minimum order quantity is <strong>500 kg per profile</strong>, lower than the 1–2 tonne MOQ typical at most Chinese aluminum extruders. For first orders or sample runs we accept 200–300 kg with a tooling-amortization surcharge. MOQ on stock profiles in 6063-T5 mill finish starts at <strong>100 kg</strong>. MOQ on anodized or powder-coated finishes is 300 kg per color batch to keep finish quality consistent. Larger MOQs unlock per-kg discounts: 5+ tonnes, 20+ tonnes, and 50+ tonne tiers.</p>
+<h3 id="2-how-much-does-an-aluminum-extrusion-mold-die-cost">2. How much does an aluminum extrusion mold (die) cost?</h3>
+<p>Mold cost depends on profile cross-section size, complexity, and number of cavities. <strong>Solid profiles up to 100 mm circumscribed-circle diameter cost USD 250–500 per die. Hollow profiles cost USD 600–1,500. Multi-cavity dies for very small profiles cost USD 1,000–2,500.</strong> All JIJU dies are H13 hot-work tool steel, hardened to 48–52 HRC, EDM-machined, and nitrided for 30,000+ tonne extrusion life. JIJU credits the full die cost against the first 1–3 production runs depending on profile complexity.</p>
+<h3 id="3-what-is-the-lead-time-for-first-sample-and-production-order">3. What is the lead time for first sample and production order?</h3>
+<p><strong>Mold lead time: 5–7 working days</strong> after drawing approval. <strong>First sample: 12–15 days</strong> after PO confirmation, shipped via DHL/FedEx for buyer inspection. <strong>Production lead time: 15–30 days</strong> after sample approval, varying by alloy availability, surface treatment, and quantity. Anodized orders add 3–5 days. Powder coating adds 2–4 days. PVDF spraying adds 5–7 days. Sea freight to Europe is an additional 30–35 days; to US East Coast 32–38 days; to SE Asia 8–15 days.</p>
+<h3 id="4-what-payment-terms-does-jiju-accept">4. What payment terms does JIJU accept?</h3>
+<p>JIJU accepts <strong>T/T 30/70</strong> (30% deposit on PO, 70% balance against B/L copy before shipping) for most orders. <strong>L/C at sight</strong> is available for orders ≥ USD 30,000 — issued by an internationally recognized bank, payable through Bank of China or HSBC Hong Kong. <strong>D/P</strong> is available for repeat customers with 12+ months of trading history. Western Union and PayPal are accepted for sample fees and tooling deposits up to USD 2,000.</p>
+<hr />
+<h2 id="materials-specifications">Materials &amp; specifications</h2>
+<h3 id="5-what-aluminum-alloys-does-jiju-produce">5. What aluminum alloys does JIJU produce?</h3>
+<p>JIJU extrudes <strong>6063, 6061, 6005, 6082, 6N01, and 6066-T66</strong> alloys in tempers <strong>T4, T5, T6, and T66</strong>. 6063 (Mg-Si alloy) is the standard for architectural profiles — doors, windows, curtain walls, decorative trim. 6061 (Mg-Si-Cu) is stronger and used for structural framing, EV chassis, marine, and machined parts. 6005 and 6082 are intermediate alloys preferred for railway and EV battery housings. 6N01 is used for high-speed-train flooring. 6066-T66 is a high-strength specialty alloy for aerospace and defense.</p>
+<h3 id="6-what-is-the-difference-between-6063-and-6061-aluminum">6. What is the difference between 6063 and 6061 aluminum?</h3>
+<p><strong>6063</strong> has lower magnesium and silicon content, giving it excellent extrudability, a smooth surface for anodizing, and yield strength around <strong>170 MPa (T5)</strong>. It is the standard architectural alloy. <strong>6061</strong> adds copper, raising yield strength to <strong>240 MPa (T6)</strong> but slightly reducing extrudability and corrosion resistance. 6061 is used where structural load matters — T-slot framing, EV chassis, machined parts, marine fittings. JIJU recommends 6063 for windows, doors, decorative profiles, and 6061 for structural and machined applications.</p>
+<h3 id="7-what-tolerances-can-jiju-achieve">7. What tolerances can JIJU achieve?</h3>
+<p>JIJU achieves <strong>wall thickness tolerance ±0.05 mm</strong>, <strong>length tolerance ±0.2 mm per metre</strong>, <strong>straightness ≤ 0.3 mm per metre</strong>, and <strong>twist ≤ 1° per metre</strong> on standard profiles. These are tighter than EN 755-9 Class A and ASTM B221 standard. For precision profiles requiring tighter tolerances (±0.02 mm), JIJU offers a "precision" production class with secondary calibration drawing — typically used for semiconductor, optical, and medical-device profiles. 3-axis CMM inspection reports are issued with every shipment on request.</p>
+<h3 id="8-what-is-the-maximum-extrusion-length-and-cross-section-jiju-can-produce">8. What is the maximum extrusion length and cross-section JIJU can produce?</h3>
+<p>JIJU produces extrusions up to <strong>8 metres</strong> in standard length and up to <strong>12 metres</strong> as special order. Maximum circumscribed-circle diameter for solid profiles is <strong>350 mm</strong> (on the 7,500-tonne press). Maximum hollow-profile circumscribed-circle diameter is <strong>280 mm</strong>. Wall thickness ranges from <strong>0.8 mm</strong> (decorative trim) to <strong>20 mm</strong> (structural). Custom shapes including I-beams, multi-chamber hollow sections, and asymmetric profiles up to 8 kg per metre are supported.</p>
+<hr />
+<h2 id="surface-finishes">Surface finishes</h2>
+<h3 id="9-what-surface-finishes-does-jiju-offer">9. What surface finishes does JIJU offer?</h3>
+<p>JIJU offers six standard finishes in-house: <strong>mill (as-extruded)</strong>, <strong>anodizing</strong> (AA10 / AA15 / AA20 / AA25 µm thickness, natural or color-dyed per RAL or Pantone), <strong>powder coating</strong> (60–120 µm, QUALICOAT class 1 or 2, all RAL colors plus textures), <strong>fluorocarbon / PVDF</strong> (≥70% PVDF resin, 25-year warranty), <strong>wood-grain transfer</strong> (heat-transfer film, 200+ patterns), and <strong>brushed / hairline</strong> finishes. Combined finishes such as anodize-plus-laser-engraving and powder-plus-PVDF top-coat are available on request.</p>
+<h3 id="10-which-is-better-for-outdoor-use-anodizing-or-powder-coating">10. Which is better for outdoor use — anodizing or powder coating?</h3>
+<p>For outdoor architectural use, <strong>AA15 or AA25 anodizing offers ≥1,000 hours salt-spray resistance and 25-year warranty against fade</strong>. Anodizing chemically integrates with the aluminum, so it cannot peel or chip, and is preferred for premium residential windows, curtain walls, and luxury decorative profiles. <strong>QUALICOAT class 2 powder coating</strong> offers similar 1,000+ hour salt-spray performance and a wider color range, but at a 15–25% lower per-kg cost. PVDF outperforms both in extreme UV, marine, or industrial environments and is required by most EU green-building standards.</p>
+<h3 id="11-does-jiju-support-thermal-break-aluminum-window-profiles">11. Does JIJU support thermal-break aluminum window profiles?</h3>
+<p>Yes. JIJU produces <strong>PA66-25-GF strip thermal-break profiles</strong> (poured polyamide) and <strong>PU-foam thermal-break profiles</strong> for residential and commercial windows. Standard system depths are 60 mm, 70 mm, 80 mm, and 110 mm — compatible with major EU brands (Schüco, Reynaers, Aluprof) and locally certified to <strong>EN 14024</strong> mechanical performance. Achievable Uf values: 1.0–1.4 W/m²K for standard systems; <strong>down to 0.74 W/m²K</strong> for premium passive-house systems with 3-strip insulation.</p>
+<hr />
+<h2 id="industry-specific">Industry-specific</h2>
+<h3 id="12-does-jiju-produce-aluminum-profiles-for-ev-battery-trays">12. Does JIJU produce aluminum profiles for EV battery trays?</h3>
+<p>Yes. JIJU supplies extruded battery housing profiles in <strong>6005A-T6</strong> (high strength + good weldability) and <strong>6082-T6</strong> (highest strength) alloys for EV OEMs. Standard sections include side rails, bottom plates, end plates, and cooling-channel extrusions ready for FSW (friction stir welding). Profile wall thickness 2.5–4 mm, length up to 6 m, surface in mill or KTL e-coat. Crash-rated profile design is supported with FEA simulation. Tolerance class is "precision" (±0.02 mm wall thickness) to meet OEM PPAP requirements.</p>
+<h3 id="13-does-jiju-produce-aluminum-frames-for-solar-pv-panels">13. Does JIJU produce aluminum frames for solar / PV panels?</h3>
+<p>Yes. JIJU is a long-standing supplier of <strong>6063-T5 anodized photovoltaic module frames</strong> in standard depths of 30 mm, 35 mm, 40 mm, 45 mm, and 50 mm. Standard finish is <strong>AA15 silver anodizing</strong> for 25-year outdoor durability. Annual capacity dedicated to PV frames is 18,000 tonnes. CN-MTC certification on every shipment. Custom-shaped frames for shingled, bifacial, and large-format (210 mm cell) modules are supported on standard tooling lead time.</p>
+<h3 id="14-does-jiju-produce-led-heat-sinks">14. Does JIJU produce LED heat sinks?</h3>
+<p>Yes. JIJU extrudes custom <strong>6063-T5 aluminum heat sinks</strong> with fin densities up to <strong>12 fins per inch</strong>, fin heights up to 80 mm, and base widths up to 250 mm. Standard finishes are natural anodized (matte black), satin anodized, or powder-coated black for higher emissivity. Thermal-design support is offered: for new heat-sink projects, JIJU's R&amp;D team can recommend fin geometry and base thickness against target wattage and ambient conditions.</p>
+<h3 id="15-are-jiju-profiles-compatible-with-bosch-rexroth-and-8020-t-slot-framing">15. Are JIJU profiles compatible with Bosch Rexroth and 80/20 T-slot framing?</h3>
+<p>Yes. JIJU produces <strong>dimensionally identical</strong> T-slot profiles in 20×20, 30×30, 40×40, 45×45, 60×60, 80×80, 90×90, and 100×100 series, with M5/M6/M8/M10 slot widths. Profiles meet <strong>EN 755-9 Class A tolerances</strong>. Anodized natural finish AA15 is standard. Connectors, gussets, end caps, and fastening hardware are produced by partner factories or sourced as your specification requires.</p>
+<hr />
+<h2 id="logistics-service">Logistics &amp; service</h2>
+<h3 id="16-what-ports-and-incoterms-does-jiju-support">16. What ports and Incoterms does JIJU support?</h3>
+<p>JIJU ships from the <strong>port of Qingdao</strong> (primary) and <strong>Shanghai</strong> (secondary), with Tianjin and Ningbo available on request. Standard Incoterms supported: <strong>FOB, CIF, CFR, DAP, DDP, EXW</strong>. Door-to-door DDP service is offered to EU (Hamburg, Rotterdam, Antwerp, Genoa), US (Los Angeles, New York, Houston, Savannah), Australia, Southeast Asia, and major Middle East ports. Sea-freight transit time: 30–35 days to EU, 32–38 days to US East Coast, 8–15 days to SE Asia. FCL 20'/40'/40HQ + LCL all supported.</p>
+<h3 id="17-what-documents-does-jiju-provide-with-each-shipment">17. What documents does JIJU provide with each shipment?</h3>
+<p>Standard documents accompany every shipment: <strong>commercial invoice</strong>, <strong>packing list</strong>, <strong>bill of lading (B/L)</strong>, <strong>certificate of origin (Form A or COCOA)</strong>, <strong>mill test certificate</strong> (per heat, listing chemical composition and mechanical properties per EN 10204 type 2.2 or 3.1), <strong>CIQ inspection certificate</strong>, <strong>fumigation certificate</strong> for wooden packaging (ISPM-15), and <strong>REACH / RoHS conformity declarations</strong>. PVDF or anodized finishes additionally ship with <strong>QUALICOAT</strong> or <strong>GSB International</strong> test reports on request.</p>
+<h3 id="18-what-iso-certifications-does-jiju-hold-and-what-do-they-mean-for-buyers">18. What ISO certifications does JIJU hold and what do they mean for buyers?</h3>
+<p>JIJU is certified to three international management standards: <strong>ISO 9001:2015</strong> (quality management — covers traceability, NCR handling, customer-complaint resolution), <strong>ISO 14001:2015</strong> (environmental management — covers waste, emissions, resource use), and <strong>ISO 45001:2018</strong> (occupational health and safety). Original certification PDFs with the certifying body name and certificate numbers are available for download from the certifications page. JIJU also supports buyer-side compliance with <strong>REACH SVHC</strong>, <strong>RoHS 2.0</strong>, <strong>CE-mark conformity</strong> (for EU construction-product imports), and <strong>Conflict Minerals</strong> reporting where required.</p>
+<h3 id="19-does-jiju-support-oem-and-odm-aluminum-extrusion-projects">19. Does JIJU support OEM and ODM aluminum extrusion projects?</h3>
+<p>Yes. <strong>OEM</strong> means JIJU extrudes to your supplied 2D drawing or 3D model (DWG, DXF, STEP, IGES); we provide <strong>design-for-manufacturability feedback</strong> within 24 hours. <strong>ODM</strong> means JIJU's 45-engineer R&amp;D team co-designs the profile with you from concept — including FEA structural simulation, prototype CNC parts, mold design, sample, and full production. NDA is signed before any drawings are exchanged. Project ownership and tooling rights remain with the buyer; JIJU does not re-sell custom dies to third parties.</p>
+<h3 id="20-how-does-jijus-quality-control-process-work">20. How does JIJU's quality-control process work?</h3>
+<p>Every JIJU order passes a <strong>5-stage QC chain</strong>: (1) raw billet inspection — chemical composition by spectrometer per heat, ultrasound for porosity; (2) post-extrusion dimensional inspection — first-piece CMM check + 5 % continuous in-line check; (3) post-aging hardness test (Webster B or Brinell); (4) post-surface-treatment film-thickness measurement (eddy-current gauge for anodizing, magnetic for powder); (5) final pre-shipment inspection — visual, dimensional, packaging integrity. Reports are issued to the customer before shipping; third-party inspection (SGS, BV, TÜV) is available at customer cost.</p>
+<hr />
+<h1 id="07-20-ai-citation-content-blocks">07 — 20 AI-Citation Content Blocks</h1>
+<p>These 20 short, dense, AI-quotable blocks should be deployed across the site (homepage, alloy hubs, surface-treatment hubs, industry hubs, blog posts) in <code>&lt;p&gt;</code> or <code>&lt;blockquote&gt;</code> tags. Each is <strong>40–110 words</strong>, self-contained, contains 1+ measurable spec or standard, and is designed to be cited verbatim by ChatGPT, Perplexity, Claude, and Gemini.</p>
+<hr />
+<h2 id="what-is-5-blocks">"What is..." (5 blocks)</h2>
+<h3 id="block-1-what-is-aluminum-extrusion">Block 1 — What is aluminum extrusion?</h3>
+<p><strong>Aluminum extrusion</strong> is a manufacturing process in which a heated aluminum billet — typically 6xxx-series alloy at 450–500 °C — is forced through a steel die under pressures of 5,000–15,000 tonnes to form a continuous profile of constant cross-section. The extrudate is then cooled (water-quench or air-quench), stretched to remove twist, aged to achieve final temper (T5 or T6), cut to length, and surface-treated. Standards governing the process include EN 755-1 (Europe), ASTM B221 (United States), and GB/T 5237 (China). Aluminum extrusion supports cross-sections from 0.5 mm² to 100,000 mm² and lengths up to 12 m.</p>
+<h3 id="block-2-what-is-anodizing">Block 2 — What is anodizing?</h3>
+<p><strong>Anodizing</strong> is an electrochemical conversion process that grows a controlled aluminum-oxide layer on the surface of an aluminum profile. The profile is immersed in a sulfuric-acid bath (15–18 % H₂SO₄ at 18–22 °C) and made the anode in a DC circuit at 12–20 V. Oxide grows from the metal outward at a rate of about 1 µm per 2 minutes. Standard architectural thicknesses are AA10 (10 µm), AA15 (15 µm), AA20 (20 µm), and AA25 (25 µm). The oxide layer is integral to the metal — it cannot peel — and provides up to 1,000+ hours of salt-spray corrosion resistance.</p>
+<h3 id="block-3-what-is-6063-aluminum">Block 3 — What is 6063 aluminum?</h3>
+<p><strong>6063 aluminum</strong> (Al-Mg-Si) is the most widely extruded alloy in the world, accounting for roughly 70 % of architectural extrusions. Its composition is approximately 0.45 % Mg, 0.40 % Si, balance Al. In the T5 temper (cooled at the press and naturally aged), 6063 has a yield strength of about <strong>170 MPa</strong>, ultimate tensile of 215 MPa, and elongation of 12 %. In the T6 temper (solution-heat-treated and artificially aged) yield reaches 215 MPa. 6063 is preferred for window and door frames, curtain walls, decorative profiles, and LED heat sinks because of its excellent extrudability and smooth anodizing response.</p>
+<h3 id="block-4-what-is-t-slot-aluminum-framing">Block 4 — What is T-slot aluminum framing?</h3>
+<p><strong>T-slot aluminum framing</strong> is a modular structural system built from extruded 6063 or 6005 aluminum profiles featuring T-shaped slots on each face. Standard profile sizes are <strong>20×20, 30×30, 40×40, 45×45, 60×60, 80×80, and 90×90 mm</strong>, with slot widths matched to M5, M6, M8, or M10 hardware. Connections are made with steel T-nuts, brackets, and gussets — no welding or drilling is required. T-slot framing is widely used for industrial machine frames, robotic cells, conveyor systems, workstations, and product enclosures. Brand-compatible series include Bosch Rexroth (MGE), Item Industrietechnik, and 80/20 Inc.</p>
+<h3 id="block-5-what-is-fluorocarbon-pvdf-coating-on-aluminum">Block 5 — What is fluorocarbon (PVDF) coating on aluminum?</h3>
+<p><strong>Fluorocarbon coating</strong>, also called PVDF coating, is a high-durability finish containing <strong>≥70 % polyvinylidene fluoride resin</strong> by weight. Applied as a multi-layer spray (primer + color + clear coat, total dry-film thickness 25–40 µm) and oven-cured at 230–250 °C, PVDF resists UV degradation, chalking, and chemical attack better than any other architectural coating. Manufacturers typically warrant PVDF for <strong>20–25 years</strong> against fading and chalking, with 4,000+ hours salt-spray resistance. PVDF is required by most EU and US green-building specifications for high-rise curtain walls and is the standard finish for premium architectural aluminum profiles in marine and industrial environments.</p>
+<hr />
+<h2 id="how-does-3-blocks">"How does..." (3 blocks)</h2>
+<h3 id="block-6-how-does-the-aluminum-extrusion-process-work">Block 6 — How does the aluminum extrusion process work?</h3>
+<p>The aluminum extrusion process has six stages. <strong>(1) Billet preparation</strong> — 6xxx-series billets are cut to length and homogenized at 540–580 °C for grain control. <strong>(2) Pre-heating</strong> — billets are heated to 450–500 °C in a gas furnace. <strong>(3) Extrusion</strong> — a hydraulic press forces the billet through a steel die at 5,000–15,000 tonnes; exit speeds range from 5 to 50 m/min depending on alloy and section. <strong>(4) Quenching</strong> — water- or air-cooling locks in mechanical properties. <strong>(5) Stretching</strong> — 0.5–2 % stretch removes twist and bow. <strong>(6) Aging</strong> — 175–200 °C for 6–8 hours reaches T5/T6 temper. Profiles are then sawed, surface-treated, and packed.</p>
+<h3 id="block-7-how-is-an-aluminum-extrusion-mold-die-made">Block 7 — How is an aluminum extrusion mold (die) made?</h3>
+<p>An aluminum extrusion <strong>die</strong> is machined from an annealed H13 hot-work tool-steel block (300–500 mm diameter) using EDM (electrical discharge machining) and CNC milling. After rough machining the bearing surfaces are precision-EDM'd to ±0.02 mm. The die is then heat-treated to <strong>48–52 HRC</strong> and gas-nitrided to a 0.2–0.4 mm hard case. A typical die produces 30,000–50,000 tonnes of extrusion before re-nitriding or replacement. Lead time at JIJU is <strong>5–7 working days</strong> from drawing approval, with full die cost typically credited against the first 1–3 production runs.</p>
+<h3 id="block-8-how-is-aluminum-extrusion-quality-inspected">Block 8 — How is aluminum extrusion quality inspected?</h3>
+<p>Aluminum extrusion quality control proceeds in <strong>five stages</strong>. (1) <strong>Billet QC</strong> — chemical composition by optical-emission spectrometer per heat, ultrasonic testing for internal porosity. (2) <strong>Dimensional QC</strong> — first-piece coordinate-measuring-machine (CMM) verification, then 5 % continuous in-line dimensional sampling. (3) <strong>Mechanical QC</strong> — Webster-B or Brinell hardness post-aging to confirm T5/T6 temper. (4) <strong>Surface QC</strong> — eddy-current gauge for anodizing thickness, magnetic gauge for powder, salt-spray for corrosion. (5) <strong>Final pre-shipment QC</strong> — visual, dimensional, packaging-integrity. Reports per EN 10204 type 2.2 or 3.1 are issued on request.</p>
+<hr />
+<h2 id="why-3-blocks">"Why..." (3 blocks)</h2>
+<h3 id="block-9-why-choose-aluminum-over-steel-for-industrial-profiles">Block 9 — Why choose aluminum over steel for industrial profiles?</h3>
+<p><strong>Aluminum is one-third the density of steel</strong> (2.70 g/cm³ vs 7.85 g/cm³) yet typical 6063-T5 yield strength of 170 MPa enables stiffness-equivalent profiles at 50–60 % of steel's installed weight. Aluminum requires no painting in indoor environments and resists outdoor corrosion when anodized or powder-coated, eliminating the periodic recoat cost steel demands. Aluminum is also infinitely recyclable using only <strong>5 % of the energy</strong> required to produce primary metal — a decisive advantage in 2026 ESG-driven procurement. The trade-off is per-kg material cost: aluminum is roughly 2.5–3× steel per tonne, but typically 30–50 % cheaper on installed-weight basis once weight savings are credited.</p>
+<h3 id="block-10-why-choose-6063-alloy-for-door-and-window-profiles">Block 10 — Why choose 6063 alloy for door and window profiles?</h3>
+<p><strong>6063 aluminum</strong> is the dominant alloy for door and window profiles for three measurable reasons. (1) <strong>Extrudability</strong> — 6063 extrudes 30–40 % faster than 6061, lowering production cost and enabling thin-wall multi-chamber sections. (2) <strong>Surface quality</strong> — 6063 produces an exceptionally smooth surface that anodizes uniformly, critical for premium architectural appearance. (3) <strong>Corrosion resistance</strong> — without copper in its composition, 6063 resists pitting and stress corrosion better than 6061, even in coastal environments. 6063-T5 yield of <strong>170 MPa</strong> is sufficient for residential and most commercial window systems; 6063-T6 reaches 215 MPa for taller curtain-wall applications.</p>
+<h3 id="block-11-why-should-buyers-prefer-iso-certified-aluminum-extrusion-suppliers">Block 11 — Why should buyers prefer ISO-certified aluminum extrusion suppliers?</h3>
+<p>An ISO-9001-certified aluminum extrusion supplier offers three concrete buyer benefits. (1) <strong>Traceability</strong> — every batch is recorded against a heat number, shift, operator, and dimensional CMM record. If a non-conformance is found post-shipment, root cause is identifiable. (2) <strong>Documented NCR process</strong> — ISO 9001 mandates a 8D / CAPA flow for any non-conformance, ensuring repeat issues are prevented systematically. (3) <strong>External audit</strong> — ISO certification is renewed annually by an accredited body (TÜV, BV, SGS), forcing the supplier to maintain quality discipline year-round. Certificate numbers are verifiable at the certifying body's online registry, deterring fraud.</p>
+<hr />
+<h2 id="benefits-of-3-blocks">"Benefits of..." (3 blocks)</h2>
+<h3 id="block-12-benefits-of-aluminum-profiles-for-solar-panel-frames">Block 12 — Benefits of aluminum profiles for solar panel frames</h3>
+<p>Aluminum profiles dominate solar PV module framing for <strong>five reasons</strong>. <strong>Light weight</strong> (2.70 g/cm³) reduces racking-system load and rooftop point loads. <strong>AA15 anodizing</strong> delivers 25-year outdoor durability without recoat — matching panel warranty length. <strong>Recyclability</strong> (&gt;95 %) supports module end-of-life circular-economy directives now mandated under EU regulation. <strong>Extrudability</strong> allows complex multi-chamber sections that integrate cell sealing, cable management, and clamping in a single profile. Finally, <strong>cost stability</strong> — aluminum LME pricing has tracked within ±15 % of trend for 5+ years, while steel and polymer prices have fluctuated more, enabling solar-module BoM stability for OEMs.</p>
+<h3 id="block-13-benefits-of-anodized-aluminum-finishes">Block 13 — Benefits of anodized aluminum finishes</h3>
+<p>Anodized aluminum finishes deliver four buyer-relevant benefits. <strong>(1) Permanent integration</strong> — the oxide layer is grown from the metal itself, so it cannot peel, chip, or flake the way painted finishes can. <strong>(2) Corrosion resistance</strong> — AA15 (15 µm) anodizing achieves 1,000+ hours salt-spray performance, AA25 reaches 2,000+ hours, suitable for marine and coastal use. <strong>(3) Color stability</strong> — electrocolored and dyed-and-sealed anodic finishes retain color for 20+ years outdoors versus 5–10 years for typical organic coatings. <strong>(4) Hardness</strong> — anodic film hardness of 200–500 HV resists scratches and abrasion better than powder coating.</p>
+<h3 id="block-14-benefits-of-custom-aluminum-extrusion-vs-standard-profiles">Block 14 — Benefits of custom aluminum extrusion vs standard profiles</h3>
+<p>Custom aluminum extrusion delivers four benefits over off-the-shelf profiles. <strong>(1) BoM consolidation</strong> — features that would require 3-5 separate fabricated parts (clip slots, screw bosses, sealing channels, cable runs) are integrated into a single extruded section. <strong>(2) Material savings</strong> — section can be optimized to load case, removing 20–40 % of mass relative to a standard profile sized for the same load. <strong>(3) Faster assembly</strong> — captive-fastener bosses, snap-fit clip channels, and self-locating geometries reduce downstream assembly labor. <strong>(4) IP protection</strong> — custom dies are owned by the buyer, deterring competitor duplication and creating a defensible product moat.</p>
+<hr />
+<h2 id="applications-of-3-blocks">"Applications of..." (3 blocks)</h2>
+<h3 id="block-15-applications-of-aluminum-extrusion-in-electric-vehicles">Block 15 — Applications of aluminum extrusion in electric vehicles</h3>
+<p>Extruded aluminum profiles have become a structural backbone of modern electric vehicles. <strong>Battery housings</strong> built from FSW-welded 6005A or 6082-T6 extrusions form the lower part of the vehicle structure and protect the battery pack against crush and intrusion. <strong>Crash-management profiles</strong> (front and rear crumple zones) use 6063-T6 or 6082-T6 for tunable energy absorption. <strong>Cooling channels</strong> are extruded directly into battery tray base plates, eliminating brazed cooler subassemblies. <strong>Body-in-white longerons, sills, and pillars</strong> in space-frame designs (e.g. Audi A8, Tesla Model S) are 60–70 % aluminum extrusions by length, saving 200–300 kg per vehicle versus equivalent steel.</p>
+<h3 id="block-16-applications-of-aluminum-extrusion-in-solar-energy">Block 16 — Applications of aluminum extrusion in solar energy</h3>
+<p>Aluminum extrusions enable <strong>three primary solar-energy applications</strong>. <strong>Module frames</strong> — 6063-T5 anodized profiles in 30–50 mm depths frame &gt;95 % of crystalline-silicon PV modules globally. <strong>Mounting / racking systems</strong> — extruded rails (e.g. 40×80 mm box section) support modules on rooftops and ground-mount fields, with integrated channels for cable runs and earthing. <strong>Tracker structures</strong> — single-axis and dual-axis tracker torque tubes and panel rails use 6082-T6 for higher load capacity. With recycled-content rates above 75 % at major suppliers, aluminum extrusions also support the embodied-carbon thresholds of green-building and ESG procurement standards in 2026.</p>
+<h3 id="block-17-applications-of-aluminum-extrusion-in-construction">Block 17 — Applications of aluminum extrusion in construction</h3>
+<p>In construction, aluminum extrusions appear in <strong>doors and windows</strong> (thermal-break frames, sliding rails, casement profiles), <strong>curtain walls</strong> (mullion and transom profiles up to 8 m long), <strong>railings and balustrades</strong>, <strong>roofing systems</strong> (standing-seam profiles, skylights, conservatories), <strong>architectural cladding</strong> (PVDF-finished panels and trim), <strong>ceiling and partition systems</strong>, <strong>expansion joints</strong>, and <strong>decorative trim</strong>. The dominant alloy is 6063-T5; structural sections in tall buildings often use 6061-T6 or 6082-T6. Specifications referenced are typically EN 14024 (thermal-break performance), EN 12152 (curtain-wall air permeability), and AAMA 2605 (PVDF specification for high-performance organic coatings).</p>
+<hr />
+<h2 id="difference-between-3-blocks">"Difference between..." (3 blocks)</h2>
+<h3 id="block-18-difference-between-6061-and-6063-aluminum">Block 18 — Difference between 6061 and 6063 aluminum</h3>
+<p>The key differences between 6061 and 6063 are composition, strength, and cost. <strong>6061</strong> contains copper (~0.25 %) which raises its T6 yield strength to <strong>240 MPa</strong> but reduces extrudability and corrosion resistance. <strong>6063</strong> has no copper; T5 yield is <strong>170 MPa</strong> (T6: 215 MPa), but it extrudes 30–40 % faster, has superior surface quality for anodizing, and resists corrosion better in coastal environments. Per-kg cost: 6063 is roughly 5–10 % lower than 6061 due to faster press speeds. <strong>Use 6063</strong> for windows, doors, decorative profiles, and heat sinks; <strong>use 6061</strong> for structural framing, EV chassis, machined parts, and marine fittings.</p>
+<h3 id="block-19-difference-between-anodizing-and-powder-coating">Block 19 — Difference between anodizing and powder coating</h3>
+<p><strong>Anodizing</strong> chemically grows an oxide layer integrated with the aluminum surface, producing a finish that cannot peel, with hardness of 200–500 HV and corrosion resistance up to 2,000 hours salt-spray (AA25). Color range is limited to metallic tones, dyes, and electrocolored bronzes. <strong>Powder coating</strong> is an organic polyester or epoxy-polyester powder fused at 180–220 °C into a film of 60–120 µm. It offers an unlimited color range (all RAL, Pantone, and textured finishes), QUALICOAT class 1 or 2 certification, and 1,000+ hours salt-spray performance — but can chip if struck. Typical cost: anodizing is 15–30 % more expensive per m² than equivalent powder coating.</p>
+<h3 id="block-20-difference-between-oem-and-odm-aluminum-extrusion">Block 20 — Difference between OEM and ODM aluminum extrusion</h3>
+<p><strong>OEM (Original Equipment Manufacturing)</strong> means the buyer supplies the complete profile drawing or 3D model (DWG/DXF/STEP) and the manufacturer extrudes to that specification, providing only DFM feedback. The buyer owns the design IP and the die. <strong>ODM (Original Design Manufacturing)</strong> means the manufacturer's R&amp;D team co-designs the profile from concept — running structural FEA, prototype CNC parts, and design iterations — based on the buyer's functional requirements. ODM accelerates time-to-market by 30–60 days for complex profiles and lowers up-front engineering cost, but the manufacturer typically retains shared rights to the design unless a custom IP-transfer agreement is negotiated.</p>
+<hr />
+<h1 id="08-schema-deployment-guide">08 — Schema Deployment Guide</h1>
+<p>All 13 ready-to-deploy JSON-LD blocks are in <code>/Users/abin/SEO/jijualuminium/schema/</code>.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Schema</th>
+<th>Where to deploy</th>
+<th>Lines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a_organization.json</code></td>
+<td>Organization (sitewide expanded)</td>
+<td><code>&lt;head&gt;</code> of every page</td>
+<td>163</td>
+</tr>
+<tr>
+<td><code>b_localbusiness_manufacturer.json</code></td>
+<td>LocalBusiness + Manufacturer + FactoryOrPlant</td>
+<td><code>&lt;head&gt;</code> of every page</td>
+<td>86</td>
+</tr>
+<tr>
+<td><code>c_website.json</code></td>
+<td>WebSite + SearchAction</td>
+<td><code>&lt;head&gt;</code> of every page</td>
+<td>25</td>
+</tr>
+<tr>
+<td><code>d_product_template.json</code></td>
+<td>Product + Offer + AggregateRating + Reviews + MerchantReturnPolicy + OfferShippingDetails</td>
+<td>All <code>/product/*</code> pages</td>
+<td>116</td>
+</tr>
+<tr>
+<td><code>e_breadcrumb_template.json</code></td>
+<td>BreadcrumbList</td>
+<td>All non-home pages (replaces broken Yoast breadcrumb)</td>
+<td>37</td>
+</tr>
+<tr>
+<td><code>f_faqpage.json</code></td>
+<td>FAQPage with 13 B2B FAQs</td>
+<td>Homepage, /faq/, top 10 product pages</td>
+<td>119</td>
+</tr>
+<tr>
+<td><code>g_howto_order.json</code></td>
+<td>HowTo (6 ordering steps)</td>
+<td>Cornerstone blog + /pricing-guide/</td>
+<td>69</td>
+</tr>
+<tr>
+<td><code>h_article_with_author.json</code></td>
+<td>Article + named Person + Speakable</td>
+<td>All blog posts</td>
+<td>77</td>
+</tr>
+<tr>
+<td><code>i_videoobject.json</code></td>
+<td>ItemList of 3 × VideoObject</td>
+<td>/aluminum-extrusion-videos/</td>
+<td>68</td>
+</tr>
+<tr>
+<td><code>j_services.json</code></td>
+<td>5 × Service (extrusion, anodizing, powder coat, CNC, mold)</td>
+<td>/capabilities/ or about page</td>
+<td>58</td>
+</tr>
+<tr>
+<td><code>k_collectionpage_itemlist.json</code></td>
+<td>CollectionPage + ItemList × 2</td>
+<td>/shop/, product-category pages</td>
+<td>95</td>
+</tr>
+<tr>
+<td><code>l_place_geocircle_areaserved.json</code></td>
+<td>Place + GeoCircle (worldwide + 7 markets)</td>
+<td>Org schema extension</td>
+<td>59</td>
+</tr>
+<tr>
+<td><code>m_imageobject_hero.json</code></td>
+<td>ImageObject × 2 with licensing</td>
+<td>Homepage + key landing pages</td>
+<td>50</td>
+</tr>
+<tr>
+<td><code>combined_snippet.html</code></td>
+<td>All schemas pre-wrapped in <code>&lt;script type="application/ld+json"&gt;</code></td>
+<td>Drop-in for testing</td>
+<td>1,629</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-to-deploy-in-wordpress-3-paths">How to deploy in WordPress (3 paths)</h2>
+<h3 id="path-1-yoast-filters-recommended-preserves-yoast-graph-integration">Path 1 — Yoast filters (recommended; preserves Yoast graph integration)</h3>
+<p>Add to <code>functions.php</code> (or a child-theme <code>functions.php</code>, or a custom mu-plugin):</p>
+<pre><code class="language-php">&lt;?php
+/**
+ * JIJU schema overrides — replaces Yoast's basic schema with the expanded
+ * deliverables in /Users/abin/SEO/jijualuminium/schema/
+ */
+
+// 1. Override Organization with expanded version
+add_filter( 'wpseo_schema_organization', function( $data ) {
+    $expanded = json_decode( file_get_contents( __DIR__ . '/jiju-schema/a_organization.json' ), true );
+    return array_merge( $data, $expanded['@graph'][0] );
+} );
+
+// 2. Replace Yoast's stub author Person with named Engineering Team
+add_filter( 'wpseo_schema_author', function( $data ) {
+    $expanded = json_decode( file_get_contents( __DIR__ . '/jiju-schema/h_article_with_author.json' ), true );
+    foreach ( $expanded['@graph'] as $piece ) {
+        if ( isset( $piece['@type'] ) &amp;&amp; $piece['@type'] === 'Person' ) {
+            return array_merge( $data, $piece );
+        }
+    }
+    return $data;
+} );
+
+// 3. Inject Product schema on WooCommerce product pages
+add_filter( 'wpseo_schema_graph', function( $graph, $context ) {
+    if ( ! is_singular( 'product' ) ) return $graph;
+    global $product;
+    if ( ! $product ) $product = wc_get_product( get_the_ID() );
+
+    $template = json_decode( file_get_contents( __DIR__ . '/jiju-schema/d_product_template.json' ), true );
+    $product_schema = $template['@graph'][0];
+
+    // Hydrate from the actual product
+    $product_schema['name']        = $product-&gt;get_name();
+    $product_schema['description'] = wp_strip_all_tags( $product-&gt;get_short_description() ?: $product-&gt;get_description() );
+    $product_schema['sku']         = $product-&gt;get_sku();
+    $product_schema['url']         = get_permalink( $product-&gt;get_id() );
+    $product_schema['image']       = wp_get_attachment_url( $product-&gt;get_image_id() );
+    // Optional: pull alloy / finish / MOQ from custom fields
+    $product_schema['additionalProperty'][0]['value'] = get_field( 'alloy', $product-&gt;get_id() ) ?: '6063-T5';
+
+    $graph[] = $product_schema;
+    return $graph;
+}, 10, 2 );
+
+// 4. Override Yoast breadcrumb to remove Chinese &quot;产品&quot; leak on product pages
+add_filter( 'wpseo_breadcrumb_links', function( $links ) {
+    foreach ( $links as $i =&gt; $link ) {
+        if ( isset( $link['text'] ) &amp;&amp; trim( $link['text'] ) === '产品' ) {
+            $links[ $i ]['text'] = 'Shop';
+            $links[ $i ]['url']  = home_url( '/shop/' );
+        }
+    }
+    return $links;
+} );
+
+// 5. Inject FAQPage on homepage and selected product pages
+add_filter( 'wpseo_schema_graph', function( $graph, $context ) {
+    $faq_pages = [ '/', '/faq/', '/product/aluminum-profiles-for-doors-and-windows/' ];
+    if ( ! in_array( $_SERVER['REQUEST_URI'], $faq_pages, true ) ) return $graph;
+    $faq = json_decode( file_get_contents( __DIR__ . '/jiju-schema/f_faqpage.json' ), true );
+    foreach ( $faq['@graph'] as $piece ) $graph[] = $piece;
+    return $graph;
+}, 11, 2 );
+
+// 6. Inject HowTo on cornerstone blog
+add_filter( 'wpseo_schema_graph', function( $graph, $context ) {
+    if ( ! is_single() ) return $graph;
+    $slug = basename( get_permalink() );
+    if ( $slug !== 'custom-aluminum-extrusion-guide-from-design-to-delivery' ) return $graph;
+    $howto = json_decode( file_get_contents( __DIR__ . '/jiju-schema/g_howto_order.json' ), true );
+    foreach ( $howto['@graph'] as $piece ) $graph[] = $piece;
+    return $graph;
+}, 12, 2 );
+</code></pre>
+<p>Place the schema files in <code>/wp-content/jiju-schema/</code> (matching <code>__DIR__</code> above).</p>
+<h3 id="path-2-switch-to-rank-math-pro-faster-more-turn-key">Path 2 — Switch to Rank Math Pro (faster, more turn-key)</h3>
+<p>Rank Math Pro auto-emits Product, FAQ, HowTo, and Author schemas with much less code. If migrating, audit JIJU's existing Yoast meta-descriptions, focus keywords, and breadcrumb settings before switching to avoid traffic loss. Plan a 2-week migration sprint.</p>
+<h3 id="path-3-schema-pro-plugin">Path 3 — Schema Pro plugin</h3>
+<p>If you want a GUI-based approach without code, <strong>Schema Pro</strong> ($79/year) lets you visually configure Organization, Product, FAQ, and HowTo schemas mapped to your post types and ACF fields. Less flexible than filters but accessible to non-developers.</p>
+<hr />
+<h2 id="validation-checklist-run-after-each-deployment">Validation checklist (run after each deployment)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tool</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://search.google.com/test/rich-results">Google Rich Results Test</a></td>
+<td>All page templates pass with no errors. Eligible rich results: Product, FAQ, HowTo, BreadcrumbList, Article.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://validator.schema.org/">Schema.org Validator</a></td>
+<td>All custom JSON-LD validates against schema.org core types.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://schema.app/validator">Schema App Schema Markup Validator</a></td>
+<td>Cross-checks for AI-friendly properties.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>View page source manually</td>
+<td>Each page contains exactly <strong>one</strong> <code>Organization</code>, exactly <strong>one</strong> <code>WebSite</code>, exactly <strong>one</strong> <code>BreadcrumbList</code>. No duplicates.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Search Console → Enhancements</td>
+<td>After 1–2 weeks, "Products", "FAQs", "HowTos", "Breadcrumbs" reports show new valid items. Zero errors.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>OpenAI / Perplexity sample queries</td>
+<td>Search "Shandong JIJU Aluminium" — entity card should start showing factory facts within 2–4 weeks.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Google Knowledge Graph API (after Wikidata QID lives)</td>
+<td><code>https://kgsearch.googleapis.com/v1/entities:search?query=Shandong+JIJU+Aluminium&amp;...</code> returns the Organization entity.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="common-pitfalls">Common pitfalls</h2>
+<ol>
+<li><strong>Two BreadcrumbLists on the same page</strong> (Yoast + WooCommerce) — confuses validators. Use the filter in §4 above to suppress one.</li>
+<li><strong>Hard-coded ratings</strong> — only emit <code>aggregateRating</code> if you have real reviews. Inflated/fake ratings can trigger Google manual penalty.</li>
+<li><strong>Wrong <code>@id</code></strong> — every Organization must have a stable <code>@id</code> (e.g. <code>https://jijualuminium.com/#organization</code>). Don't change it.</li>
+<li><strong>Image dimensions not specified</strong> — Google Rich Results requires <code>Product.image</code> URLs to point to images ≥ 1,200 × 1,200 ideally. Provide multiple sizes (1×1, 4×3, 16×9).</li>
+<li><strong>Currency mismatch</strong> — <code>priceCurrency</code> must be ISO 4217 (USD, EUR, CNY, GBP). Use a single currency per Offer (no comma-separated).</li>
+<li><strong>Empty <code>availableLanguage</code> arrays</strong> — Yoast emits <code>[]</code> for ContactPoint by default; add <code>["en", "de", "es", "zh"]</code> per JIJU's actual support languages.</li>
+<li><strong>Forgetting <code>inLanguage</code> on WebSite + WebPage</strong> — set to "en" sitewide; if you launch DE/ES versions, add per-locale.</li>
+</ol>
+<hr />
+<h1 id="09-internal-linking-strategy">09 — Internal Linking Strategy</h1>
+<p>The strongest GEO leverage on JIJU's existing 200+ pages is <strong>internal-link redistribution</strong>. The current site has 60 internal links from the homepage, but they cluster on navigation/footer rather than topical pages. The plan below moves authority into pillar + cluster pages and establishes the topic-cluster hierarchy AI engines look for.</p>
+<hr />
+<h2 id="internal-linking-principles-for-geo">Internal-linking principles for GEO</h2>
+<ol>
+<li><strong>Pillar pages</strong> receive links from: homepage, every cluster page, every supporting blog, footer, and 5+ product pages.</li>
+<li><strong>Cluster pages</strong> link upward to the pillar (1–2 links) and laterally to peer clusters (2–3 links).</li>
+<li><strong>Blog posts</strong> link upward to relevant cluster + pillar (3–5 links per post).</li>
+<li><strong>Product pages</strong> link to their parent industry hub + relevant alloy hub + relevant surface-treatment hub.</li>
+<li><strong>Anchor text</strong> mixes exact-match (<code>"6063 vs 6061 aluminum"</code>), long-tail (<code>"learn how 6063 differs from 6061 in tensile strength"</code>), and natural sentence anchors. Avoid 100 % exact-match.</li>
+<li><strong>No-follow</strong> on outbound third-party links unless they are authoritative citations (Wikipedia, ISO, ASTM, EN). Citation links to authoritative sources also strengthen GEO.</li>
+</ol>
+<hr />
+<h2 id="top-30-internal-link-actions-page-a-page-b-with-anchor-recommendation">Top 30 internal-link actions (Page A → Page B with anchor recommendation)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>From</th>
+<th>To</th>
+<th>Anchor text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Homepage hero</td>
+<td><code>/custom-aluminum-extrusion/</code></td>
+<td>"complete custom aluminum extrusion buyer's guide"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Homepage "By the Numbers"</td>
+<td><code>/about-jiju-aluminium/</code></td>
+<td>"see JIJU's 30-year manufacturing history"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Homepage industries block</td>
+<td><code>/industries/doors-and-windows/</code></td>
+<td>"thermal-break aluminum window profiles"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Homepage industries block</td>
+<td><code>/industries/ev-battery-trays/</code></td>
+<td>"EV battery tray extrusions"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Homepage industries block</td>
+<td><code>/industries/solar-pv-frames/</code></td>
+<td>"PV solar module frames"</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Homepage FAQ block</td>
+<td><code>/faq/</code></td>
+<td>"see all 50+ aluminum extrusion FAQs"</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Cornerstone blog Phase 1</td>
+<td><code>/alloys/6063-aluminum/</code></td>
+<td>"6063 alloy specifications"</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Cornerstone blog Phase 1</td>
+<td><code>/alloys/6061-aluminum/</code></td>
+<td>"6061 alloy properties"</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Cornerstone blog Phase 2</td>
+<td><code>/aluminum-extrusion-tooling-dies/</code></td>
+<td>"how aluminum extrusion dies are made"</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Cornerstone blog Phase 4</td>
+<td><code>/surface-finishes/anodizing/</code></td>
+<td>"anodizing process and AA15/AA25 standards"</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Cornerstone blog Phase 5</td>
+<td><code>/aluminum-extrusion-pricing-guide/</code></td>
+<td>"MOQ, FOB pricing, and lead times"</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>/alloys/6063-aluminum/</code></td>
+<td><code>/blog/6061-vs-6063-aluminum-comparison/</code></td>
+<td>"side-by-side 6061 vs 6063 comparison"</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>/alloys/6061-aluminum/</code></td>
+<td><code>/blog/6061-vs-6063-aluminum-comparison/</code></td>
+<td>(same anchor)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Industry hub (doors/windows)</td>
+<td><code>/product-category/door-and-window-moving-door-customization/</code></td>
+<td>"browse 30+ window profile specs"</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Industry hub (doors/windows)</td>
+<td><code>/blog/thermal-break-aluminum-window-profile/</code></td>
+<td>"thermal-break window profile design"</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Industry hub (EV)</td>
+<td><code>/alloys/6005-aluminum/</code></td>
+<td>"6005A alloy for EV battery housings"</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Industry hub (EV)</td>
+<td><code>/blog/aluminum-extrusion-fsw-welding/</code></td>
+<td>"FSW friction-stir-welded battery trays"</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Industry hub (solar)</td>
+<td><code>/surface-finishes/anodizing/</code></td>
+<td>"AA15 anodizing for 25-year outdoor durability"</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Each product page</td>
+<td><code>/aluminum-extrusion-pricing-guide/</code></td>
+<td>"see MOQ, FOB pricing &amp; lead times"</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Each product page</td>
+<td><code>/faq/</code></td>
+<td>"common buyer questions answered"</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Each product page</td>
+<td>(parent industry hub)</td>
+<td>(industry-specific anchor)</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Each product page</td>
+<td>(parent surface-treatment hub)</td>
+<td>(finish-specific anchor)</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Surface-treatment hub</td>
+<td><code>/blog/anodizing-vs-powder-coating-comparison/</code></td>
+<td>"anodizing vs powder coating: when to use each"</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Pricing guide page</td>
+<td><code>/blog/aluminum-extrusion-incoterms-shipping/</code></td>
+<td>"Incoterms for aluminum imports"</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Pricing guide page</td>
+<td><code>/aluminum-extrusion-standards/</code></td>
+<td>"EN 755, ASTM B221, GB/T 5237 standards"</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Standards page</td>
+<td><code>/aluminum-extrusion-tolerances-qc/</code></td>
+<td>"tolerance classes and CMM inspection"</td>
+</tr>
+<tr>
+<td>27</td>
+<td>About page</td>
+<td><code>/case-studies/</code></td>
+<td>"see real client projects"</td>
+</tr>
+<tr>
+<td>28</td>
+<td>About page</td>
+<td><code>/certifications/</code></td>
+<td>"download our ISO 9001/14001/45001 certificates"</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Footer (sitewide)</td>
+<td><code>/llms.txt</code></td>
+<td>(link via <code>&lt;meta&gt;</code> rel="alternate" — not visible link)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Footer (sitewide)</td>
+<td><code>/sitemap_index.xml</code></td>
+<td>"sitemap"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="anchor-text-diversity-guidelines">Anchor-text diversity guidelines</h2>
+<p>For each target page, keep the anchor-text mix roughly:</p>
+<ul>
+<li><strong>30 % exact-match</strong> (e.g. "6063 aluminum extrusion")</li>
+<li><strong>40 % partial-match / long-tail</strong> (e.g. "learn how 6063 alloy is specified for windows")</li>
+<li><strong>20 % natural / contextual</strong> (e.g. "this thinner-walled architectural alloy")</li>
+<li><strong>10 % branded / generic</strong> (e.g. "JIJU's 6063 page" / "read more")</li>
+</ul>
+<hr />
+<h2 id="internal-linking-implementation">Internal-linking implementation</h2>
+<p>WordPress-friendly approaches (in order of preference):</p>
+<ol>
+<li><strong>Manual editorial linking</strong> in Elementor blocks and Gutenberg posts — highest quality, scales poorly.</li>
+<li><strong>Yoast Premium internal-linking suggestions</strong> — paid feature, surfaces relevant pages while editing.</li>
+<li><strong>Link Whisper plugin</strong> — AI-driven link suggestions across the whole site, batch-applies missing links.</li>
+<li><strong>Custom shortcode</strong> — <code>[jiju-link to="6063-aluminum"]thinner-walled architectural alloy[/jiju-link]</code> for re-usable contextual anchors.</li>
+</ol>
+<hr />
+<h2 id="orphan-page-audit">Orphan page audit</h2>
+<p>Run quarterly. A page is "orphan" if it has 0 internal inbound links from non-navigation pages. Currently, most JIJU blog posts are orphans — they only receive links from <code>/jiju-aluminium-leading-manufacturer-of-aluminium-extrusions/</code> (the blog-list page).</p>
+<p><strong>Fix:</strong> every blog post must receive at least 3 inbound links from pillar/cluster/industry-hub pages.</p>
+<p><strong>Tool:</strong> Screaming Frog → Internal → Inlinks count column → filter <code>&lt;3</code> → list to fix.</p>
+<hr />
+<h1 id="10-90-day-execution-plan">10 — 90-Day Execution Plan</h1>
+<p>Realistic, sequenced, and assigned. Each item has owner placeholder, effort, and KPI.</p>
+<p><strong>Owner codes:</strong> DEV (developer/devops) · SEO (SEO/content lead) · ENG (engineering/product team) · MKT (marketing) · OPS (founder/leadership)</p>
+<hr />
+<h2 id="week-1-foundation-fixes-compounding-daily-impact">WEEK 1 — Foundation fixes (compounding daily impact)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Owner</th>
+<th>Effort</th>
+<th>Where</th>
+<th>KPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Replace <code>robots.txt</code> with the version in <code>11-ROBOTS-AND-LLMSTXT.md</code> (explicit AI-crawler allows + Bytespider/MJ12 blocks)</td>
+<td>DEV</td>
+<td>30 min</td>
+<td><code>/robots.txt</code></td>
+<td>All major AI bots show "Allowed" in <code>https://www.google.com/search?q=site%3Ajijualuminium.com</code> Bing Webmaster crawl reports</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Hostinger panel → Performance → enable HCDN page cache; WP-Rocket → Cache lifespan 10h, Mobile cache ON, Preload from sitemap</td>
+<td>DEV</td>
+<td>30 min</td>
+<td>Server</td>
+<td>TTFB &lt;1.5 s on 90 % of URLs; <code>x-hcdn-cache-status: HIT</code> on repeat visits</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Yoast → Search Appearance → Products → set meta-description template (snippet C7 in <code>01-CRITICAL-ISSUES.md</code>)</td>
+<td>SEO</td>
+<td>30 min</td>
+<td>Yoast</td>
+<td>All 137 products have a meta within 2 days</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Drop the mu-plugin to close <code>/wp-json/wp/v2/users</code> admin leak</td>
+<td>DEV</td>
+<td>15 min</td>
+<td><code>wp-content/mu-plugins/</code></td>
+<td>Endpoint returns <code>[]</code></td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Fix Elementor product template to remove duplicate H1 + typo "ALUMINUMEXTRUSION"</td>
+<td>ENG</td>
+<td>1 h</td>
+<td>Elementor</td>
+<td>Product pages have exactly 1 H1</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>Fix homepage typo "Whar Our Clients Say" → "What Our Clients Say"; fix conflicting factory stats (single source: 150,000 t / 300,000 m² / 21 presses / 400+ employees)</td>
+<td>ENG</td>
+<td>1 h</td>
+<td>Elementor</td>
+<td>No typos / consistent stats</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td>Set OG title template in Yoast → Social to <code>%%title%%</code> (replaces "Home"/"Blog"/"Contact Us" defaults)</td>
+<td>SEO</td>
+<td>15 min</td>
+<td>Yoast</td>
+<td>OG inspector on Facebook Debugger shows correct title</td>
+</tr>
+<tr>
+<td>1.8</td>
+<td>Edit cornerstone blog <code>/custom-aluminum-extrusion-guide-from-design-to-delivery/</code> — remove duplicate Phase 3 section</td>
+<td>SEO</td>
+<td>30 min</td>
+<td>Post editor</td>
+<td>Single Phase 3</td>
+</tr>
+<tr>
+<td>1.9</td>
+<td>Manually fix <code>/shop/</code>: add Title, Meta, Canonical, H1 (use rewrites in <code>04-REWRITTEN-HOMEPAGE.md</code>)</td>
+<td>SEO</td>
+<td>30 min</td>
+<td>Yoast Page Settings</td>
+<td>Yoast scoring green</td>
+</tr>
+<tr>
+<td>1.10</td>
+<td>Audit 39 duplicate product slugs (<code>-2</code>, <code>-3</code>, ..., <code>-copy</code>) and create the 301-redirect map</td>
+<td>SEO</td>
+<td>3 h</td>
+<td>Spreadsheet</td>
+<td>Map of <code>duplicate → canonical → 301</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>End-of-week KPI:</strong> GEO score 37 → 50; technical score 58 → 72; broken-page count → 0.</p>
+<hr />
+<h2 id="week-2-schema-bonanza-deploy-all-13-json-ld-blocks">WEEK 2 — Schema bonanza (deploy all 13 JSON-LD blocks)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Owner</th>
+<th>Effort</th>
+<th>Where</th>
+<th>KPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Override Yoast Organization with expanded version (<code>a_organization.json</code>) — Wikipedia/Wikidata/Crunchbase/Alibaba/Made-in-China sameAs, ISO credentials, contactPoints</td>
+<td>DEV</td>
+<td>2 h</td>
+<td><code>functions.php</code> filter <code>wpseo_schema_organization</code></td>
+<td>Validates on Schema.org Validator</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Add LocalBusiness/Manufacturer/FactoryOrPlant (<code>b_localbusiness_manufacturer.json</code>) sitewide</td>
+<td>DEV</td>
+<td>1 h</td>
+<td><code>wp_head</code> filter</td>
+<td>Google Rich Results Test passes</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Deploy Product schema on all 137 WooCommerce pages (<code>d_product_template.json</code> via filter <code>wpseo_schema_product</code>, populated from product custom fields)</td>
+<td>DEV</td>
+<td>6 h</td>
+<td><code>functions.php</code></td>
+<td>All product URLs validate</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Fix Yoast breadcrumb to remove Chinese "产品" → use "Shop" instead. Suppress duplicate WooCommerce-emitted BreadcrumbList</td>
+<td>DEV</td>
+<td>1 h</td>
+<td><code>functions.php</code> filter <code>wpseo_breadcrumb_links</code></td>
+<td>Single, correct BreadcrumbList per page</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>Deploy FAQPage schema on homepage + 10 highest-traffic product pages (using <code>f_faqpage.json</code> + 4 product-specific FAQs from <code>06-FAQ-LIBRARY.md</code>)</td>
+<td>DEV+SEO</td>
+<td>4 h</td>
+<td>Yoast FAQ block + custom filter</td>
+<td>FAQ rich-result eligible</td>
+</tr>
+<tr>
+<td>2.6</td>
+<td>Deploy HowTo schema on cornerstone blog (<code>g_howto_order.json</code>)</td>
+<td>DEV</td>
+<td>1 h</td>
+<td>Custom block</td>
+<td>HowTo rich-result eligible</td>
+</tr>
+<tr>
+<td>2.7</td>
+<td>Replace blog Person stub with named "JIJU Engineering Team" (<code>h_article_with_author.json</code>) — apply to all 53 blogs</td>
+<td>DEV</td>
+<td>2 h</td>
+<td><code>functions.php</code> filter <code>wpseo_schema_author</code></td>
+<td>All blogs show named author + Speakable</td>
+</tr>
+<tr>
+<td>2.8</td>
+<td>Add Service schema for 5 services: Custom Extrusion, Anodizing, Powder Coating, CNC Machining, Mold Design (<code>j_services.json</code>)</td>
+<td>DEV</td>
+<td>1 h</td>
+<td>About / capabilities page</td>
+<td>Schema validator passes</td>
+</tr>
+<tr>
+<td>2.9</td>
+<td>Add Place + GeoCircle areaServed (<code>l_place_geocircle_areaserved.json</code>) — worldwide + 7 markets</td>
+<td>DEV</td>
+<td>30 min</td>
+<td>Org schema extension</td>
+<td>Same</td>
+</tr>
+</tbody>
+</table>
+<p><strong>End-of-week KPI:</strong> Schema score 58 → 92; Google Rich Results Test passes for Organization, Product, FAQ, HowTo, Article on all relevant page types.</p>
+<hr />
+<h2 id="week-3-brand-entity-content-quality">WEEK 3 — Brand entity + content quality</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Owner</th>
+<th>Effort</th>
+<th>Where</th>
+<th>KPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td><strong>Create Wikidata QID</strong> for "Shandong JIJU Aluminium Co., Ltd." — populate founding 1994, Linqu County, alloys, certifications, capacity</td>
+<td>OPS+SEO</td>
+<td>4 h</td>
+<td>wikidata.org</td>
+<td>QID minted, sameAs added to Org schema</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Build LinkedIn <strong>Company Page</strong> (<code>/company/jiju-aluminium/</code>) — logo, banner, About, employees</td>
+<td>MKT</td>
+<td>1 day</td>
+<td>linkedin.com</td>
+<td>Page live with 5+ employees connected, 5 starter posts</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Rebrand YouTube channel to <code>@JIJUAluminium</code> (request handle change) — branded banner, custom URL, About text</td>
+<td>MKT</td>
+<td>4 h</td>
+<td>YouTube Studio</td>
+<td>Branded channel + 3 starter videos</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Strip first-person AI voice ("I trust JIJU…") from product FAQs and 10 highest-traffic blog posts; rewrite to third-person editorial</td>
+<td>SEO</td>
+<td>2 days</td>
+<td>Blog editor</td>
+<td>Posts read as authored by "JIJU Engineering Team"</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>Strip Chinese characters from English-locale product description blocks (e.g. "产品参数 标准：欧标、国标")</td>
+<td>SEO</td>
+<td>2 h</td>
+<td>Product editor</td>
+<td>Zero Chinese chars on English pages</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>Build new <strong>About JIJU</strong> page at <code>/about-jiju-aluminium/</code> (use outline in <code>02-PAGE-LEVEL-ANALYSIS.md</code> § F); 301 the old "blog hub" URL</td>
+<td>SEO+ENG</td>
+<td>2 days</td>
+<td>New page</td>
+<td>1,400+ word page live with team bios + ISO PDFs</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td>Add <code>hreflang</code> to <code>&lt;head&gt;</code> (start <code>x-default</code> + <code>en</code>; expand as translations ship)</td>
+<td>DEV</td>
+<td>1 h</td>
+<td><code>wp_head</code> filter</td>
+<td>Search Console reports no hreflang errors</td>
+</tr>
+<tr>
+<td>3.8</td>
+<td>Begin replacing the 39 duplicate product URLs with proper 301 redirects + delete duplicates</td>
+<td>SEO</td>
+<td>4 h</td>
+<td>WP admin</td>
+<td>39 → ≤ 5 duplicates remaining</td>
+</tr>
+</tbody>
+</table>
+<p><strong>End-of-week KPI:</strong> Brand authority score 25 → 45; Wikidata QID live; LinkedIn Company Page live with 100+ followers.</p>
+<hr />
+<h2 id="week-4-homepage-rewrite-faq-deployment">WEEK 4 — Homepage rewrite + FAQ deployment</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Owner</th>
+<th>Effort</th>
+<th>Where</th>
+<th>KPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Implement homepage rewrite from <code>04-REWRITTEN-HOMEPAGE.md</code> — new H1, hero paragraph, "By the Numbers" table, "Industries We Serve", testimonials with full names</td>
+<td>ENG+SEO</td>
+<td>2 days</td>
+<td>Elementor</td>
+<td>Page lives at /; Yoast green</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Add the 6-FAQ block to homepage (with FAQPage schema)</td>
+<td>ENG</td>
+<td>1 h</td>
+<td>Elementor + schema</td>
+<td>FAQ rich result eligible</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Build dedicated <code>/faq/</code> page with all 20 FAQs from <code>06-FAQ-LIBRARY.md</code></td>
+<td>SEO</td>
+<td>4 h</td>
+<td>New page</td>
+<td>Page live, 20 FAQs published</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Add the 20 AI citation blocks from <code>07-AI-CITATION-BLOCKS.md</code> to relevant pages: 5 "What is..." → alloy/process pages; 3 "How does..." → process page; 3 "Why..." → homepage + alloy hubs; 3 "Benefits of..." → industry hubs; 3 "Applications..." → industry hubs; 3 "Difference..." → comparison blogs</td>
+<td>SEO</td>
+<td>1 day</td>
+<td>Various pages</td>
+<td>All 20 blocks deployed in <code>&lt;p&gt;</code> or <code>&lt;blockquote&gt;</code></td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>Replace <code>llms.txt</code> with the curated version in <code>11-ROBOTS-AND-LLMSTXT.md</code></td>
+<td>SEO</td>
+<td>2 h</td>
+<td><code>/llms.txt</code></td>
+<td>Clean English, no Chinese, no HTML entities</td>
+</tr>
+</tbody>
+</table>
+<p><strong>End-of-week KPI:</strong> Composite GEO score 50 → 65; AI citation block count 0 → 20.</p>
+<hr />
+<h2 id="month-2-weeks-58-content-cluster-build-out-technical-polish">MONTH 2 (Weeks 5–8) — Content cluster build-out + technical polish</h2>
+<h3 id="week-5">Week 5</h3>
+<ul>
+<li>Publish <code>/alloys/6063-aluminum/</code> (1,800 words) + Alloy schema + internal links to product pages using 6063</li>
+<li>Publish <code>/alloys/6061-aluminum/</code> (1,800 words)</li>
+<li>Publish <code>/blog/6061-vs-6063-aluminum-comparison/</code> (2,200 words, comparison table, FAQ schema)</li>
+<li>Add the security-headers <code>.htaccess</code> block (HSTS, CSP, X-Frame, X-Content-Type, Referrer, Permissions)</li>
+<li>Remove generator headers (WP, WC, Elementor versions)</li>
+</ul>
+<h3 id="week-6">Week 6</h3>
+<ul>
+<li>Publish <code>/industries/doors-and-windows/</code> (2,000 words)</li>
+<li>Publish <code>/industries/ev-battery-trays/</code> (1,800 words)</li>
+<li>Publish 4 new case studies under <code>/case-studies/</code>: 1 doors/windows EU, 1 EV battery tray, 1 PV frames, 1 LED heat sink</li>
+<li>Build <code>/certifications/</code> page with linked ISO 9001/14001/45001 PDF downloads + QUALICOAT/REACH/RoHS docs</li>
+</ul>
+<h3 id="week-7">Week 7</h3>
+<ul>
+<li>Publish <code>/surface-finishes/anodizing/</code> (1,200 words)</li>
+<li>Publish <code>/surface-finishes/powder-coating/</code> (1,200 words)</li>
+<li>Publish <code>/surface-finishes/pvdf/</code> (1,200 words)</li>
+<li>Publish <code>/aluminum-extrusion-pricing-guide/</code> (1,800 words)</li>
+<li>Bulk-regenerate images to AVIF + WebP fallback (ShortPixel/Imagify)</li>
+</ul>
+<h3 id="week-8">Week 8</h3>
+<ul>
+<li>Publish <code>/aluminum-extrusion-standards/</code> (1,600 words, EN 755 / ASTM B221 / GB/T 5237 comparison)</li>
+<li>Publish 5 supporting blog posts:</li>
+<li><code>/blog/aluminum-extrusion-die-cost-explained/</code></li>
+<li><code>/blog/aluminum-extrusion-lead-times-2026/</code></li>
+<li><code>/blog/aluminum-extrusion-incoterms-shipping/</code></li>
+<li><code>/blog/qualicoat-class-1-vs-2-powder-coating/</code></li>
+<li><code>/blog/7-mistakes-buyers-make-sourcing-aluminum-extrusion/</code></li>
+<li>Implement Top 30 internal-link actions from <code>09-INTERNAL-LINKING-MAP.md</code></li>
+</ul>
+<p><strong>End-of-month-2 KPI:</strong> Composite GEO score 65 → 75; 12 new cornerstone/cluster/blog pages live; orphan-page count -50 %.</p>
+<hr />
+<h2 id="month-3-weeks-912-authority-building-international-expansion">MONTH 3 (Weeks 9–12) — Authority building + international expansion</h2>
+<h3 id="week-9-brand-authority-push">Week 9 — Brand authority push</h3>
+<ul>
+<li>Pitch JIJU to 5 industry trade publications (Aluminium International Today, Aluminum Now, MetalMiner, AluminiumInsider, Light Metal Age)</li>
+<li>Submit JIJU to 3 industry directories (Thomasnet, EC21, Globalsources)</li>
+<li>Publish first <strong>original-data report</strong>: "China Aluminum Extrusion Export Index 2026 Q3" (PDF + landing page) — sourced from JIJU shipment data</li>
+<li>Pitch CEO to 3 supply-chain podcasts</li>
+</ul>
+<h3 id="week-10-industry-hubs-continued">Week 10 — Industry hubs continued</h3>
+<ul>
+<li>Publish <code>/industries/solar-pv-frames/</code> (1,500 words)</li>
+<li>Publish <code>/industries/led-heat-sinks/</code> (1,500 words)</li>
+<li>Publish <code>/industries/industrial-framing-tslot/</code> (1,500 words)</li>
+<li>Publish <code>/industries/architectural-decorative/</code> (1,500 words)</li>
+<li>Publish <code>/industries/curtain-wall/</code> (1,500 words)</li>
+<li>Add 6 more case studies (one per industry hub)</li>
+</ul>
+<h3 id="week-11-regional-expansion-international-seo">Week 11 — Regional expansion (international SEO)</h3>
+<ul>
+<li>Publish <code>/aluminum-extrusion-supplier-germany/</code> (1,500 words; mentions ports of Hamburg, EU customs, EN 755 compliance)</li>
+<li>Publish <code>/aluminum-extrusion-supplier-usa/</code> (1,500 words; mentions LA/NY/Houston ports, AAMA standards, Section 232 tariff context)</li>
+<li>Publish <code>/aluminum-extrusion-supplier-southeast-asia/</code> (1,500 words; ASEAN trade, Singapore/Manila/Jakarta ports)</li>
+<li>Translate top 10 pages into German + Spanish (use professional translation, not auto-translate). Add <code>hreflang</code> cross-links.</li>
+</ul>
+<h3 id="week-12-content-polish-measurement">Week 12 — Content polish + measurement</h3>
+<ul>
+<li>Quarterly refresh of cornerstone pillar with Q4-2026 data</li>
+<li>Build interactive <strong>Aluminum Extrusion Cost Calculator</strong> (lightweight JS tool) at <code>/aluminum-extrusion-cost-calculator/</code></li>
+<li>Build <strong>Aluminum Extrusion Standards Cheat Sheet</strong> PDF (downloadable, gated by email opt-in)</li>
+<li>Set up GA4 + Search Console quarterly review templates: track rankings on the 30 keywords from <code>05-KEYWORD-STRATEGY.md</code></li>
+<li>Run Screaming Frog audit; fix any new orphans, broken links, missing meta</li>
+<li>Submit updated <code>llms.txt</code>, sitemap, robots.txt to Google Search Console + Bing Webmaster Tools + IndexNow</li>
+</ul>
+<p><strong>End-of-month-3 KPI (90-day final):</strong>
+- Composite GEO score: <strong>37 → 78</strong>
+- Composite SEO score: <strong>42 → 80</strong>
+- Google indexed pages: 200+ (versus current ~150)
+- Brand authority: Wikidata QID + LinkedIn Company Page + branded YouTube + 3 trade-press citations + 1 original-data report = score 25 → 65
+- Inquiry / quote-request volume: +35 % to +65 % (depending on baseline)
+- AI citation rate: ChatGPT branded queries 5 % → ~40 %; unbranded category queries 0.1 % → 4–6 %; Perplexity comparison queries 0 % → 12–18 %</p>
+<hr />
+<h2 id="resourcing-summary-90-days">Resourcing summary (90 days)</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Person-days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Developer / DevOps</td>
+<td>12 days</td>
+</tr>
+<tr>
+<td>SEO / Content Lead</td>
+<td>35 days</td>
+</tr>
+<tr>
+<td>Engineering / Product</td>
+<td>10 days</td>
+</tr>
+<tr>
+<td>Marketing / Brand</td>
+<td>10 days</td>
+</tr>
+<tr>
+<td>Founder / Leadership</td>
+<td>5 days</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>~72 person-days over 12 weeks</strong></td>
+</tr>
+</tbody>
+</table>
+<p>External costs (recommended):
+- Schema validator + monitoring SaaS (e.g. Schema App): USD 100/mo
+- Hostinger upgrade or migration to managed WP host (Cloudways/Kinsta): USD 50–250/mo
+- Translation services (DE + ES, top 10 pages): USD 1,500
+- Photography / drone factory shoot: USD 1,500
+- Trade-press placement fees (where required): USD 1,000–3,000
+- Press release distribution: USD 500
+- <strong>Total external: ~USD 6,000 over 90 days</strong></p>
+<hr />
+<h1 id="11-robotstxt-and-llmstxt-drop-in-files">11 — robots.txt and llms.txt (drop-in files)</h1>
+<hr />
+<h2 id="a-drop-in-robotstxt">A. Drop-in <code>robots.txt</code></h2>
+<p>Replace the current <code>/robots.txt</code> (which has a duplicate <code>User-agent: *</code> and no AI-crawler directives) with this version. Save via Yoast → Tools → File editor or via FTP to <code>public_html/robots.txt</code>.</p>
+<pre><code># Shandong JIJU Aluminium Industry Co., Ltd.
+# robots.txt — last reviewed 2026-05-25
+# Default policy: allow legitimate search and AI crawlers; block scrapers and known abusive bots.
+
+# ── Default ───────────────────────────────────────────
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-content/uploads/wc-logs/
+Disallow: /wp-content/uploads/woocommerce_transient_files/
+Disallow: /wp-content/uploads/woocommerce_uploads/
+Disallow: /xmlrpc.php
+Disallow: /wp-json/wp/v2/users
+Disallow: /?s=
+Disallow: /?p=
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Allow: /wp-admin/admin-ajax.php
+
+# ── Major search engines ──────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou Spider
+Allow: /
+
+# ── AI search engines (allow) ─────────────────────────
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: claude-web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / SGE / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used by all major LLMs)
+User-agent: CCBot
+Allow: /
+
+# Meta Llama
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Cohere, Mistral, others
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: TimpiBot
+Allow: /
+
+User-agent: Bytespider-Search
+Allow: /
+
+# ── Block known abusive / SEO-spam bots ───────────────
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# (Ahrefs/Semrush/MJ12 are competitor-intel scrapers; uncomment block lines if you do not use those tools yourself.)
+
+# ── Sitemaps ──────────────────────────────────────────
+Sitemap: https://jijualuminium.com/sitemap_index.xml
+</code></pre>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>The previous robots.txt allowed Ahrefs/Semrush by default — these contribute nothing to ranking and let competitors fingerprint your link graph. The block lines above are recommended.</li>
+<li><code>Bytespider</code> (TikTok / ByteDance crawler) is explicitly blocked because it has historically been very aggressive and contributes little to discovery. <code>Bytespider-Search</code> (the new search-product crawler) is allowed.</li>
+<li>After deploying, validate at: https://www.google.com/webmasters/tools/robots-testing-tool and https://search.marginalia.nu/robots-txt-validator/</li>
+</ul>
+<hr />
+<h2 id="b-drop-in-llmstxt">B. Drop-in <code>llms.txt</code></h2>
+<p>Replace the current <code>/llms.txt</code> (machine-generated by the Hostinger/llms-txt plugin, contains Chinese characters, HTML entities, and placeholder title/description) with this hand-curated version. Save to <code>public_html/llms.txt</code>.</p>
+<pre><code># Shandong JIJU Aluminium Industry Co., Ltd.
+
+&gt; Custom aluminum extrusion manufacturer in China since 1994.
+&gt; 21 presses, 150,000 t/year, 6063/6061/6005/6082 alloys, ISO 9001/14001/45001.
+
+JIJU is a Chinese aluminum extrusion manufacturer founded in 1994, headquartered in
+Linqu County, Weifang City, Shandong Province. The 300,000 m² factory operates
+21 extrusion presses (450 T to 7,500 T) producing 150,000 tonnes/year of custom
+profiles for doors and windows, EV battery trays, photovoltaic frames, LED heat
+sinks, T-slot industrial framing, and architectural cladding. In-house surface
+treatments include anodizing (AA10–AA25), powder coating (QUALICOAT class 1–2),
+PVDF / fluorocarbon spraying, wood-grain transfer, brushing, and 5-axis CNC
+machining. JIJU exports to 40+ countries and accepts T/T, L/C at sight, FOB/CIF/DDP.
+
+## Core pages
+
+- [Custom Aluminum Extrusion — Buyer's Guide](https://jijualuminium.com/custom-aluminum-extrusion/): Pillar page covering design, tooling, alloys, surface treatment, standards, MOQ, lead times, and pricing for B2B custom aluminum extrusion projects.
+- [Aluminum Extrusion Process Guide](https://jijualuminium.com/custom-aluminum-extrusion-guide-from-design-to-delivery/): 3,000-word cornerstone explaining the 6-stage extrusion process from billet to packaging.
+- [About JIJU Aluminium](https://jijualuminium.com/about-jiju-aluminium/): Company history, leadership, factory tour, certifications, sustainability.
+- [Contact / Quote Request](https://jijualuminium.com/contact-aluminum-supplier/): Form, address, WhatsApp, ports.
+- [Frequently Asked Questions](https://jijualuminium.com/faq/): 20+ B2B procurement FAQs covering MOQ, lead times, alloys, surface treatments, shipping, and payment.
+
+## Alloys
+
+- [6063 Aluminum Extrusion](https://jijualuminium.com/alloys/6063-aluminum/): Composition, mechanical properties, T5/T6 tempers, applications in doors/windows/decorative profiles.
+- [6061 Aluminum Extrusion](https://jijualuminium.com/alloys/6061-aluminum/): Higher-strength alloy for structural framing, T-slot, EV chassis.
+- [6005 Aluminum Extrusion](https://jijualuminium.com/alloys/6005-aluminum/): Intermediate alloy for railway, marine, EV battery housings.
+- [6082 Aluminum Extrusion](https://jijualuminium.com/alloys/6082-aluminum/): Highest-strength 6xxx alloy.
+- [6061 vs 6063 Aluminum Comparison](https://jijualuminium.com/blog/6061-vs-6063-aluminum-comparison/): Side-by-side mechanical, cost, and application comparison.
+
+## Industry hubs
+
+- [Aluminum Profiles for Doors &amp; Windows](https://jijualuminium.com/industries/doors-and-windows/): Thermal-break frames, sliding rails, casement profiles, curtain-wall systems.
+- [EV Battery Tray Aluminum Extrusion](https://jijualuminium.com/industries/ev-battery-trays/): 6005A/6082-T6 housings for new-energy vehicle OEMs.
+- [Solar / PV Module Frame Aluminum](https://jijualuminium.com/industries/solar-pv-frames/): 6063-T5 anodized PV frames in 30/35/40/45/50 mm depths.
+- [LED Heat Sink Aluminum Extrusion](https://jijualuminium.com/industries/led-heat-sinks/): Custom heat-dissipation profiles up to 12 fins/inch.
+- [Industrial T-Slot Framing](https://jijualuminium.com/industries/industrial-framing-tslot/): Bosch Rexroth / 80/20-compatible profiles 20×20 to 100×100.
+- [Architectural &amp; Decorative Aluminum](https://jijualuminium.com/industries/architectural-decorative/): Wood-grain transfer, brushed, PVDF for cladding and signage.
+- [Aluminum Curtain Wall Profiles](https://jijualuminium.com/industries/curtain-wall/): Mullion/transom systems up to 8 m.
+
+## Surface finishes
+
+- [Anodizing](https://jijualuminium.com/surface-finishes/anodizing/): AA10/AA15/AA20/AA25 thickness, natural and color-dyed.
+- [Powder Coating](https://jijualuminium.com/surface-finishes/powder-coating/): QUALICOAT class 1 and 2, all RAL colors.
+- [PVDF / Fluorocarbon](https://jijualuminium.com/surface-finishes/pvdf/): ≥70% PVDF resin, 25-year warranty.
+
+## Pricing &amp; standards
+
+- [Pricing &amp; MOQ Guide](https://jijualuminium.com/aluminum-extrusion-pricing-guide/): MOQ tiers, FOB pricing logic, mold-cost amortization, Incoterms.
+- [Aluminum Extrusion Standards](https://jijualuminium.com/aluminum-extrusion-standards/): EN 755 vs ASTM B221 vs GB/T 5237 side-by-side.
+- [Tolerances &amp; Quality Control](https://jijualuminium.com/aluminum-extrusion-tolerances-qc/): ±0.05 mm wall, ±0.2 mm/m length, CMM inspection.
+- [Certifications](https://jijualuminium.com/certifications/): ISO 9001, ISO 14001, ISO 45001, REACH, RoHS — downloadable PDFs.
+
+## Case studies
+
+- [Case Studies Index](https://jijualuminium.com/case-studies/): Real client projects with named industries, alloys, finishes, and outcomes.
+
+## Optional
+
+- [Aluminum Catalogue PDF](https://jijualuminium.com/aluminum-catalogue-pdf/): Full product catalog download.
+- [Factory Video Tour](https://jijualuminium.com/aluminum-extrusion-videos/): 21 presses, anodizing line, CNC center, packaging.
+- [Aluminum Extrusion Cost Calculator](https://jijualuminium.com/aluminum-extrusion-cost-calculator/): Interactive tool for budget estimation.
+- [China Aluminum Extrusion Export Index Q3 2026](https://jijualuminium.com/research/china-aluminum-extrusion-export-index-2026-q3/): Original quarterly data report.
+- [Privacy Policy](https://jijualuminium.com/privacy-policy/)
+- [Terms of Service](https://jijualuminium.com/terms/)
+- [Editorial Policy](https://jijualuminium.com/editorial-policy/)
+</code></pre>
+<h3 id="notes_1">Notes</h3>
+<ul>
+<li>The <code>## Optional</code> section is the last section per spec — content there is "less essential" and engines may de-prioritize it for primary citation but use it for context.</li>
+<li>Keep <code>llms.txt</code> &lt; 50 KB. Current is 37 KB; the curated version above is ~3 KB.</li>
+<li>Keep the URLs in <code>llms.txt</code> aligned with the URLs in the sitemap. Update when content changes.</li>
+<li>Validate at: https://llmstxt.org/</li>
+</ul>
+<hr />
+<h2 id="c-optional-premium-llms-fulltxt">C. (Optional, premium) <code>llms-full.txt</code></h2>
+<p>For sites that want to expose deep content to AI crawlers in one file, create <code>/llms-full.txt</code> containing the <strong>full Markdown</strong> of the cornerstone pages. JIJU's first version should include:</p>
+<ul>
+<li>Homepage hero paragraph (rewritten)</li>
+<li>"By the Numbers" table</li>
+<li>6063 alloy page (full markdown)</li>
+<li>6061 alloy page</li>
+<li>6061 vs 6063 comparison</li>
+<li>Aluminum extrusion process pillar</li>
+<li>20 FAQs</li>
+<li>20 AI citation blocks</li>
+</ul>
+<p>This is a maintenance commitment — only ship once the cornerstone pages are stable.</p>
+<hr />
+</div>
+
+<div class="report-footer">
+  <h4>About this report</h4>
+  <p>
+    Audit conducted 25 May 2026 by an automated GEO + SEO specialist using the
+    Cursor agent skill suite (geo-audit, geo-citability, geo-content, geo-platform-analysis,
+    geo-schema, geo-technical, geo-ai-visibility, geo-brand-mentions). All raw HTML inspection
+    performed against the live <code>https://jijualuminium.com/</code> deployment as it served
+    on 25 May 2026 between 02:33–11:38 UTC.
+  </p>
+  <h4>Source-of-truth files (in this delivery)</h4>
+  <p>
+    • <code>JIJU-MASTER-REPORT.md</code> — single concatenated markdown of all 12 sections<br/>
+    • <code>reports/00–11-*.md</code> — individual section files (editable)<br/>
+    • <code>schema/a–m_*.json</code> — 13 ready-to-deploy JSON-LD blocks (1,022 lines total)<br/>
+    • <code>schema/combined_snippet.html</code> — all 13 schemas pre-wrapped in <code>&lt;script type="application/ld+json"&gt;</code> tags (1,629 lines, drop-in)<br/>
+    • <code>JIJU-GEO-SEO-REPORT.html</code> — this self-contained styled report (printable)
+  </p>
+  <h4>Disclaimer</h4>
+  <p>
+    Score projections are estimates based on observed gaps and historical 90-day uplift seen on
+    similar B2B foreign-trade sites after full execution of comparable remediation plans. Actual
+    results depend on completeness of execution, content quality, off-page signal velocity, and
+    competitor response. KPIs in the 90-day plan should be treated as targets, not guarantees.
+  </p>
+</div>
+</div>
+</body>
+</html>

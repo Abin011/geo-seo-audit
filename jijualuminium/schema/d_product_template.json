@@ -1,0 +1,116 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://jijualuminium.com/product/aluminum-profiles-for-doors-and-windows/#product",
+  "name": "Aluminum Profiles for Doors and Windows \u2013 Thermal Break 6063-T5",
+  "alternateName": "Thermal Break Aluminum Window & Door Extrusion Profiles",
+  "url": "https://jijualuminium.com/product/aluminum-profiles-for-doors-and-windows/",
+  "image": [
+    "https://jijualuminium.com/wp-content/uploads/2024/12/Aluminum-profiles-for-doors-and-Windows-4-scaled.webp"
+  ],
+  "description": "Custom 6063-T5 aluminum extrusion profiles engineered for high-performance thermal-break casement, sliding, tilt-turn, and curtain-wall door and window systems. Anodized, powder-coated, or wood-grain finished. Tolerances within \u00b10.05 mm. Compatible with standard PA66 thermal break strips and global hardware. OEM/ODM with custom mold service. Lead time 25\u201335 days, FOB Qingdao port.",
+  "sku": "JIJU-DW-6063-001",
+  "mpn": "JIJU-DW-6063-001",
+  "gtin": "[REPLACE: GTIN/EAN if assigned; remove this property if no GTIN exists]",
+  "productID": "jiju:1579",
+  "category": "Aluminum Profiles for Doors and Windows",
+  "material": "Aluminum alloy 6063-T5",
+  "color": "Silver / Champagne / Bronze / Black / Wood Grain / Custom RAL",
+  "weight": {"@type": "QuantitativeValue", "value": 1.45, "unitCode": "KGM", "name": "kg per linear meter (representative)"},
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Alloy", "value": "6063 (also available in 6061, 6005, 6082)"},
+    {"@type": "PropertyValue", "name": "Temper", "value": "T5 / T6"},
+    {"@type": "PropertyValue", "name": "Maximum Length", "value": "6500", "unitCode": "MMT", "unitText": "mm"},
+    {"@type": "PropertyValue", "name": "Wall Thickness Range", "value": "0.8 \u2013 6.0 mm"},
+    {"@type": "PropertyValue", "name": "Tolerance", "value": "\u00b10.05 mm per GB/T 14846 / EN 12020"},
+    {"@type": "PropertyValue", "name": "Surface Finish", "value": "Mill, anodized, powder coated, fluorocarbon (PVDF), wood grain heat-transfer"},
+    {"@type": "PropertyValue", "name": "Thermal Break", "value": "PA66 GF25 strip compatible (14.8 / 18.6 / 24 / 34 mm)"},
+    {"@type": "PropertyValue", "name": "Application", "value": "Casement windows, sliding doors, tilt-turn windows, curtain walls, sunrooms"},
+    {"@type": "PropertyValue", "name": "Customization", "value": "OEM / ODM with custom die (mold)"},
+    {"@type": "PropertyValue", "name": "MOQ", "value": "500 kg"},
+    {"@type": "PropertyValue", "name": "Lead Time", "value": "25 \u2013 35 days after sample approval"},
+    {"@type": "PropertyValue", "name": "Port of Loading", "value": "Qingdao, China"}
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "JIJU Aluminium",
+    "logo": "https://jijualuminium.com/wp-content/uploads/2024/11/cropped-a140959110fc357eb27202217d6c747.png"
+  },
+  "manufacturer": {"@id": "https://jijualuminium.com/#organization"},
+  "isRelatedTo": [
+    {"@type": "Product", "name": "Aluminum Curtain Wall Profile"},
+    {"@type": "Product", "name": "Aluminum Sliding Door Profile"}
+  ],
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "B2B importers, distributors, window & door fabricators, construction contractors"
+  },
+  "countryOfOrigin": {"@type": "Country", "name": "China"},
+  "hasMeasurement": [
+    {"@type": "QuantitativeValue", "propertyID": "length", "value": 6000, "unitCode": "MMT", "unitText": "mm (standard length)"}
+  ],
+  "offers": {
+    "@type": "Offer",
+    "url": "https://jijualuminium.com/product/aluminum-profiles-for-doors-and-windows/",
+    "priceCurrency": "USD",
+    "price": "0.00",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "price": "0.00",
+      "valueAddedTaxIncluded": false,
+      "description": "Price On Application (POA). Contact JIJU sales team for an indicative quotation \u2014 typically USD 2.30 \u2013 3.80 per kg FOB Qingdao depending on alloy, temper, surface treatment and order volume."
+    },
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "businessFunction": "https://schema.org/Sell",
+    "itemCondition": "https://schema.org/NewCondition",
+    "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 500, "unitCode": "KGM", "unitText": "kg (MOQ)"},
+    "areaServed": {"@type": "Place", "name": "Worldwide"},
+    "seller": {"@id": "https://jijualuminium.com/#organization"},
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "Worldwide",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+      "description": "Custom-extruded profiles are non-returnable once approved. Manufacturing defects covered by replacement or credit within 30 days of receipt; please contact info@jijualuminium.com with photos and lot number."
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {"@type": "DefinedRegion", "name": "Worldwide"},
+      "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"},
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {"@type": "QuantitativeValue", "minValue": 25, "maxValue": 35, "unitCode": "DAY"},
+        "transitTime": {"@type": "QuantitativeValue", "minValue": 15, "maxValue": 45, "unitCode": "DAY"}
+      },
+      "description": "FOB Qingdao by default. FCL (20\u2032/40\u2032HQ) and LCL available. CIF and DDP available on request. Incoterms 2020."
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": 27,
+    "reviewCount": 27
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Alice", "jobTitle": "Engineering Manager"},
+      "datePublished": "2026-02-14",
+      "reviewBody": "We developed a great partnership with JIJU ALUMINIUM. We appreciate their guidance and assistance. Their technicians are very professional.",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Marshall", "jobTitle": "Procurement Manager"},
+      "datePublished": "2026-01-21",
+      "reviewBody": "It's been great working with Ji Ju Aluminum. I'll keep working with them.",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+    }
+  ]
+}

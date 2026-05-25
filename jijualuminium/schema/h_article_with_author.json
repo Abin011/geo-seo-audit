@@ -1,0 +1,77 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://jijualuminium.com/custom-aluminum-extrusion-guide-from-design-to-delivery/#article",
+      "isPartOf": {"@id": "https://jijualuminium.com/custom-aluminum-extrusion-guide-from-design-to-delivery/"},
+      "mainEntityOfPage": {"@id": "https://jijualuminium.com/custom-aluminum-extrusion-guide-from-design-to-delivery/"},
+      "headline": "Custom Aluminum Extrusion Guide: From Design to Delivery",
+      "alternativeHeadline": "How JIJU Engineers Take Your Custom 6063 / 6061 Profile From Sketch to Container",
+      "description": "Master the custom aluminum extrusion process. Explore 6061/6063 design tips, tooling, surface treatments, tolerances and lead times from JIJU Aluminium\u2019s senior extrusion engineering team.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jijualuminium.com/wp-content/uploads/2026/04/Gemini_Generated_Image_6euxmj6euxmj6eux-1-scaled.webp",
+        "width": 2560,
+        "height": 1396
+      },
+      "thumbnailUrl": "https://jijualuminium.com/wp-content/uploads/2026/04/Gemini_Generated_Image_6euxmj6euxmj6eux-1-scaled.webp",
+      "datePublished": "2026-04-11T09:41:05+00:00",
+      "dateModified": "2026-04-11T09:43:38+00:00",
+      "inLanguage": "en-US",
+      "wordCount": 2564,
+      "articleSection": ["Blog", "Aluminum Extrusion", "Manufacturing Guides"],
+      "keywords": ["custom aluminum extrusion", "6063 aluminum profile", "6061 aluminum profile", "aluminum die design", "DFM for extrusion", "China aluminum manufacturer"],
+      "author": {"@id": "https://jijualuminium.com/team/jiju-engineering-team/#person"},
+      "publisher": {"@id": "https://jijualuminium.com/#organization"},
+      "isAccessibleForFree": true,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".entry-content h2", ".entry-content p.lead", ".entry-summary"]
+      },
+      "about": [
+        {"@type": "Thing", "name": "Aluminum extrusion"},
+        {"@type": "Thing", "name": "6063 aluminum alloy"},
+        {"@type": "Thing", "name": "Custom aluminum profile design"}
+      ],
+      "citation": [
+        {"@type": "CreativeWork", "name": "EN 12020-2: Aluminium and aluminium alloys \u2014 Extruded precision profiles in alloys EN AW-6060 and EN AW-6063 \u2014 Tolerances"},
+        {"@type": "CreativeWork", "name": "AAMA 611 / 2603 / 2604 / 2605 \u2014 Architectural aluminium finishes"}
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jijualuminium.com/team/jiju-engineering-team/#person",
+      "name": "JIJU Engineering Team",
+      "givenName": "JIJU",
+      "familyName": "Engineering Team",
+      "alternateName": "Shandong Jiju R&D Department",
+      "url": "https://jijualuminium.com/team/jiju-engineering-team/",
+      "image": "https://jijualuminium.com/wp-content/uploads/2025/02/jiju-engineering-team.webp",
+      "jobTitle": "Senior Aluminum Extrusion Engineer",
+      "description": "JIJU's 45-engineer R&D group covers die design, billet metallurgy, press parameter optimization, anodizing/coating chemistry and CNC machining. Combined experience exceeds 600 person-years on 6xxx-series extrusions for architectural, transportation and new-energy applications.",
+      "worksFor": {"@id": "https://jijualuminium.com/#organization"},
+      "memberOf": {"@id": "https://jijualuminium.com/#organization"},
+      "knowsAbout": [
+        "Aluminum extrusion die design",
+        "6063 / 6061 / 6005 / 6082 metallurgy",
+        "Press flow analysis",
+        "Anodizing and powder coating",
+        "Thermal break aluminum window design",
+        "Aluminum CNC machining"
+      ],
+      "knowsLanguage": ["English", "Chinese"],
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "[REPLACE: Lead engineer alma mater, e.g. Shandong University \u2014 Materials Science]"}
+      ],
+      "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "M.Eng. Materials Science (lead engineer)"},
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "ISO 9001 internal auditor"}
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/jijualuminium/",
+        "https://www.youtube.com/@JackieWang-g7q"
+      ]
+    }
+  ]
+}
