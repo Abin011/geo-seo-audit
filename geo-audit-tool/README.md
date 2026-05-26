@@ -26,6 +26,8 @@ pip install -r requirements.txt
 
 ## Web 界面（推荐）
 
+### macOS / Linux
+
 ```bash
 cd /Users/abin/SEO/geo-audit-tool
 chmod +x start_web.sh
