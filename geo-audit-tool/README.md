@@ -34,6 +34,30 @@ chmod +x start_web.sh
 
 浏览器打开 **http://127.0.0.1:8765** → 输入 URL → 等待 1–3 分钟 → 查看/下载中文报告。
 
+### Windows 启动方式
+
+在 Windows 的 CMD 里不能运行 `.sh`，请用下面任意一种方式：
+
+**方式 A（CMD）：**
+
+```bat
+cd geo-audit-tool
+start_web.bat
+```
+
+**方式 B（PowerShell）：**
+
+```powershell
+cd geo-audit-tool
+.\start_web.ps1
+```
+
+如果 PowerShell 提示执行策略不允许运行脚本，可先执行（仅当前终端生效）：
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
 或手动启动：
 
 ```bash
